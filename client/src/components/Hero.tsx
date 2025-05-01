@@ -10,7 +10,8 @@ export default function Hero() {
             <div className="w-full lg:w-3/5">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-6 leading-tight text-gray-900">
                 Product & Tech Lead
-                <span className="text-secondary-600 block md:inline"> at Livspace</span>
+                <span className="text-secondary-600 block md:inline"> Professional</span>
+                <span className="block text-3xl md:text-4xl mt-2 text-gray-700">at Livspace</span>
               </h1>
               <p className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
                 8 years of experience building supply chain and finance products across B2B and D2C models, with expertise in Finance Operations, Supply Chain Management, and People Operations domains.
