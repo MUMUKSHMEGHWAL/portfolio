@@ -82,7 +82,7 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-sm shadow-sm z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <a href="#" className="text-2xl font-bold text-gray-800 font-heading flex items-center">
-          <span className="text-secondary-600">Portfolio</span>
+          <span className="text-secondary-600">Mumuksh Meghwal</span>
         </a>
         
         {/* Mobile menu button */}
