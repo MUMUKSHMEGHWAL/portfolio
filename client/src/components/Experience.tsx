@@ -37,7 +37,7 @@ export default function Experience() {
                   Leading a team of 18 engineers across Finance Operations, Supply Chain Management, and People Operations domains at Livspace, a unicorn in the interior design sector with a portfolio of $200M.
                 </p>
                 
-                <h4 className="font-bold text-gray-800 mb-2 mt-6">Key Achievements:</h4>
+                <h4 className="font-bold text-gray-800 mb-2 mt-6">Key Business Achievements:</h4>
                 <ul className="space-y-2 mb-4">
                   <li className="flex gap-3">
                     <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
@@ -54,6 +54,34 @@ export default function Experience() {
                   <li className="flex gap-3">
                     <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
                     <span className="text-gray-600">Scaled Livspace's Home Services platform from 1 to 10x, serving 1000+ DAUs</span>
+                  </li>
+                </ul>
+                
+                <h4 className="font-bold text-gray-800 mb-2 mt-6">Technical Leadership:</h4>
+                <ul className="space-y-2 mb-4">
+                  <li className="flex gap-3">
+                    <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
+                    <span className="text-gray-600">Led revamp of livspace.com/in/magazine and livspace.com/in/design-ideas to drive better adoption</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
+                    <span className="text-gray-600">Led development of content management system (CMS) for organization to be consumed by 10+ apps</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
+                    <span className="text-gray-600">Led development for marketplace web-app and app to enable growth of business</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
+                    <span className="text-gray-600">Core contributor to in-house micro-frontend architecture-based apps</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
+                    <span className="text-gray-600">Core contributor to design system, powering 13+ apps</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
+                    <span className="text-gray-600">Led Finance operations workflow automation to bring efficiency of team</span>
                   </li>
                 </ul>
                 

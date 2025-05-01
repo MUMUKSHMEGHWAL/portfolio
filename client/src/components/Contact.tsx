@@ -99,17 +99,7 @@ export default function Contact() {
                     </div>
                   </div>
                   
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 rounded-full bg-secondary-100 flex items-center justify-center flex-shrink-0">
-                      <Github className="h-5 w-5 text-secondary-600" />
-                    </div>
-                    <div className="ml-4">
-                      <h4 className="font-medium text-gray-900">GitHub</h4>
-                      <a href={SOCIAL_LINKS.GITHUB} target="_blank" rel="noopener noreferrer" className="text-secondary-600 hover:underline">
-                        github.com/username
-                      </a>
-                    </div>
-                  </div>
+
                 </div>
               </CardContent>
             </Card>
@@ -121,8 +111,6 @@ export default function Contact() {
                 </p>
                 <div className="flex space-x-4">
                   <SocialButton href={SOCIAL_LINKS.LINKEDIN} icon={<Linkedin className="h-5 w-5" />} />
-                  <SocialButton href={SOCIAL_LINKS.GITHUB} icon={<Github className="h-5 w-5" />} />
-                  <SocialButton href={SOCIAL_LINKS.TWITTER} icon={<Twitter className="h-5 w-5" />} />
                 </div>
               </CardContent>
             </Card>

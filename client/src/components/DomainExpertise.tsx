@@ -80,7 +80,7 @@ export default function DomainExpertise() {
                 </ul>
               </div>
               
-              <div className="md:w-3/5 p-8">
+              {/* <div className="md:w-3/5 p-8">
                 <h4 className="text-xl font-bold font-heading mb-4 text-gray-900">Projects & Solutions</h4>
                 
                 <div className="space-y-6">
@@ -100,7 +100,7 @@ export default function DomainExpertise() {
                     </div>
                   ))}
                 </div>
-              </div>
+              </div> */}
             </div>
           </Card>
         </div>
