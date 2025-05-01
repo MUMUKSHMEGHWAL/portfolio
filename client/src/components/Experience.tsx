@@ -170,7 +170,7 @@ export default function Experience() {
           </div>
           
           {/* Sapient Experience */}
-          <div>
+          <div className="opacity-0" data-scroll="fade-in-up" data-scroll-once="true" data-scroll-delay="0.4">
             <div className="flex flex-col-reverse md:flex-row gap-8 items-center md:items-start">
               <div className="w-full md:w-3/4">
                 <div className="p-6 rounded-2xl transition-all duration-300 hover:bg-gray-50 hover:shadow-lg hover:translate-y-[-5px]">
@@ -224,13 +224,18 @@ export default function Experience() {
           </div>
           
           {/* Technical Skills Section */}
-          <div className="mt-16">
+          <div className="mt-16 opacity-0" data-scroll="fade-in-up" data-scroll-once="true" data-scroll-delay="0.6">
             <Card className="shadow-lg hover:shadow-xl transition-all duration-300">
               <CardContent className="p-8">
                 <h3 className="text-xl font-bold font-heading mb-4 text-gray-900">Technical Expertise</h3>
                 <div className="flex flex-wrap gap-2">
                   {TECHNICAL_SKILLS.map((skill, index) => (
-                    <Badge key={index} variant="secondary" className="bg-secondary-100 text-secondary-800 hover:bg-secondary-200 transition-all duration-300 hover:translate-y-[-2px]">
+                    <Badge 
+                      key={index} 
+                      variant="secondary" 
+                      className="bg-secondary-100 text-secondary-800 hover:bg-secondary-200 transition-all duration-300 hover:translate-y-[-2px] hover:shadow-md"
+                      style={{ animationDelay: `${0.1 * index}s` }}
+                    >
                       {skill}
                     </Badge>
                   ))}

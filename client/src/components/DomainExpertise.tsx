@@ -19,7 +19,7 @@ export default function DomainExpertise() {
     <section id="domains" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 opacity-0" data-scroll="fade-in-up" data-scroll-once="true">
             <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4 text-gray-900">Domain Expertise</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               At Livspace, I have developed deep expertise in three key domains, leading technology initiatives that drive business growth and operational excellence.
@@ -28,13 +28,13 @@ export default function DomainExpertise() {
           </div>
 
           {/* Domain Tabs */}
-          <div className="mb-12">
+          <div className="mb-12 opacity-0" data-scroll="fade-in-up" data-scroll-once="true" data-scroll-delay="0.2">
             <div className="flex flex-wrap justify-center gap-2 md:gap-4">
               <Button
                 variant={activeTab === 'finance' ? 'default' : 'outline'} 
                 className={activeTab === 'finance' 
-                  ? 'bg-secondary-600 text-white' 
-                  : 'bg-white hover:bg-gray-100 border border-gray-200 text-gray-700'}
+                  ? 'bg-secondary-600 text-white transition-all duration-300 transform hover:scale-105' 
+                  : 'bg-white hover:bg-gray-100 border border-gray-200 text-gray-700 transition-all duration-300 transform hover:scale-105'}
                 onClick={() => handleTabChange('finance')}
               >
                 Finance Operations
@@ -42,8 +42,8 @@ export default function DomainExpertise() {
               <Button
                 variant={activeTab === 'supply-chain' ? 'default' : 'outline'} 
                 className={activeTab === 'supply-chain' 
-                  ? 'bg-secondary-600 text-white' 
-                  : 'bg-white hover:bg-gray-100 border border-gray-200 text-gray-700'}
+                  ? 'bg-secondary-600 text-white transition-all duration-300 transform hover:scale-105' 
+                  : 'bg-white hover:bg-gray-100 border border-gray-200 text-gray-700 transition-all duration-300 transform hover:scale-105'}
                 onClick={() => handleTabChange('supply-chain')}
               >
                 Supply Chain Management
@@ -51,8 +51,8 @@ export default function DomainExpertise() {
               <Button
                 variant={activeTab === 'people' ? 'default' : 'outline'} 
                 className={activeTab === 'people' 
-                  ? 'bg-secondary-600 text-white' 
-                  : 'bg-white hover:bg-gray-100 border border-gray-200 text-gray-700'}
+                  ? 'bg-secondary-600 text-white transition-all duration-300 transform hover:scale-105' 
+                  : 'bg-white hover:bg-gray-100 border border-gray-200 text-gray-700 transition-all duration-300 transform hover:scale-105'}
                 onClick={() => handleTabChange('people')}
               >
                 People Operations
@@ -61,7 +61,7 @@ export default function DomainExpertise() {
           </div>
 
           {/* Domain Content */}
-          <Card className="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <Card className="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-500 opacity-0" data-scroll="fade-in-up" data-scroll-once="true" data-scroll-delay="0.4">
             <div className="md:flex">
               <div className="md:w-2/5 bg-gray-800 text-white p-8">
                 <h3 className="text-2xl font-bold font-heading mb-4">{activeDomain.title}</h3>
@@ -72,7 +72,11 @@ export default function DomainExpertise() {
                 <h4 className="text-secondary-400 font-bold mb-3">Key Achievements:</h4>
                 <ul className="space-y-3">
                   {activeDomain.achievements.map((achievement, index) => (
-                    <li key={index} className="flex gap-3">
+                    <li 
+                      key={index} 
+                      className="flex gap-3 opacity-0 animate-slide-in-right"
+                      style={{ animationDelay: `${0.5 + (index * 0.15)}s` }}
+                    >
                       <Check className="h-5 w-5 text-secondary-400 flex-shrink-0" />
                       <span>{achievement}</span>
                     </li>
