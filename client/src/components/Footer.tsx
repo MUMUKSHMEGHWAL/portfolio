@@ -47,7 +47,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-6 md:mb-0">
               <a href="#" className="text-xl font-bold flex items-center">
-                <span className="text-secondary-500">Portfolio</span>
+                <span className="text-secondary-500">Mumuksh Meghwal</span>
               </a>
               <p className="text-gray-400 mt-2">Product & Technology Leader</p>
             </div>

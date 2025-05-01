@@ -1,14 +1,13 @@
 // Social Media Links
 export const SOCIAL_LINKS = {
-  LINKEDIN: "https://linkedin.com/in/username",
+  LINKEDIN: "https://linkedin.com/in/mumukshmeghwal",
   GITHUB: "https://github.com/username",
-  TWITTER: "https://twitter.com/username",
-  MEDIUM: "https://medium.com/@username"
+  TWITTER: "https://twitter.com/username"
 };
 
 // Contact Information
 export const CONTACT_INFO = {
-  EMAIL: "contact@example.com"
+  EMAIL: "mumukshmeghwal@gmail.com"
 };
 
 // Resume File URLs

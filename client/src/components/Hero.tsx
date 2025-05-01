@@ -33,15 +33,11 @@ export default function Hero() {
               </div>
             </div>
             <div className="w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-4 border-secondary-100 shadow-xl">
-              <svg 
-                viewBox="0 0 100 100" 
-                className="w-full h-full bg-gray-200"
-                aria-label="Profile photo placeholder"
-              >
-                <rect width="100" height="100" fill="#e2e8f0" />
-                <path d="M35,40 Q50,20 65,40 L65,60 Q50,80 35,60 Z" fill="#94a3b8" />
-                <circle cx="50" cy="30" r="20" fill="#94a3b8" />
-              </svg>
+              <img 
+                src="/images/profile.jpg" 
+                alt="Mumuksh Meghwal" 
+                className="w-full h-full object-cover object-center"
+              />
             </div>
           </div>
         </div>
