@@ -18,85 +18,93 @@ export default function Experience() {
           <div className="mb-20">
             <div className="flex flex-col-reverse md:flex-row gap-8 items-center md:items-start">
               <div className="w-full md:w-3/4">
-                <h3 className="text-2xl font-bold font-heading mb-2 text-gray-900">Product & Tech Lead</h3>
-                <div className="flex flex-wrap gap-4 mb-4 text-gray-600">
-                  <div className="flex items-center">
-                    <Building className="h-4 w-4 mr-1 text-secondary-600" />
-                    <span>Livspace</span>
+                <div className="p-6 rounded-2xl transition-all duration-300 hover:bg-gray-50 hover:shadow-lg hover:translate-y-[-5px]">
+                  <h3 className="text-2xl font-bold font-heading mb-2 text-gray-900">Product & Tech Lead</h3>
+                  <div className="flex flex-wrap gap-4 mb-4 text-gray-600">
+                    <div className="flex items-center">
+                      <Building className="h-4 w-4 mr-1 text-secondary-600" />
+                      <span>Livspace</span>
+                    </div>
+                    <div className="flex items-center">
+                      <MapPin className="h-4 w-4 mr-1 text-secondary-600" />
+                      <span>Bangalore, India</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Clock className="h-4 w-4 mr-1 text-secondary-600" />
+                      <span>May 2020 - Present</span>
+                    </div>
                   </div>
-                  <div className="flex items-center">
-                    <MapPin className="h-4 w-4 mr-1 text-secondary-600" />
-                    <span>Bangalore, India</span>
+                  <p className="text-gray-600 mb-4">
+                    Leading a team of 2 Product Managers and 18 engineers across Finance Operations, Supply Chain Management, and People Operations domains at Livspace, a unicorn in the interior design sector with a portfolio of $200M.
+                  </p>
+                
+                  <h4 className="font-bold text-gray-800 mb-2 mt-6">Key Business Achievements:</h4>
+                  <ul className="space-y-2 mb-4">
+                    <li className="flex gap-3">
+                      <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
+                      <span className="text-gray-600">Automated finance ops processes for accounts receivable and payable, saving 8 CR/yr</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
+                      <span className="text-gray-600">Spearheading IPO readiness across functions</span>
+                    </li>
+                    
+                    <li className="flex gap-3">
+                      <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
+                      <span className="text-gray-600">Optimized last-mile deliveries reducing warehouse and transportation costs by 1.6 CR/yr</span>
+                    </li>
+                    
+                    <li className="flex gap-3">
+                      <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
+                      <span className="text-gray-600">Scaled Livspace's Home Services platform from 1 to 10x, serving 1000+ DAUs</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
+                      <span className="text-gray-600">Introduced proof-of-delivery reducing short/wrong supply by 80%, saving 2.6 CR/yr</span>
+                    </li>
+                  </ul>
+                  
+                  <h4 className="font-bold text-gray-800 mb-2 mt-6">Technical Leadership:</h4>
+                  <ul className="space-y-2 mb-4">
+                    <li className="flex gap-3">
+                      <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
+                      <span className="text-gray-600">Led revamp of livspace.com/in/magazine and livspace.com/in/design-ideas to drive better adoption</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
+                      <span className="text-gray-600">Led development of content management system (CMS) for organization to be consumed by 10+ apps</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
+                      <span className="text-gray-600">Led development for marketplace web-app and app to enable growth of business</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
+                      <span className="text-gray-600">Core contributor to in-house micro-frontend architecture-based apps</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
+                      <span className="text-gray-600">Core contributor to design system, powering 13+ apps</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
+                      <span className="text-gray-600">Led Finance operations workflow automation to bring efficiency of team</span>
+                    </li>
+                  </ul>
+                  
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    <Badge variant="secondary" className="bg-secondary-100 text-secondary-800">Java</Badge>
+                    <Badge variant="secondary" className="bg-secondary-100 text-secondary-800">Python</Badge>
+                    <Badge variant="secondary" className="bg-secondary-100 text-secondary-800">Golang</Badge>
+                    <Badge variant="secondary" className="bg-secondary-100 text-secondary-800">NodeJS</Badge>
+                    <Badge variant="secondary" className="bg-secondary-100 text-secondary-800">VueJS</Badge>
+                    <Badge variant="secondary" className="bg-secondary-100 text-secondary-800">ReactJS</Badge>
+                    <Badge variant="secondary" className="bg-secondary-100 text-secondary-800">AWS</Badge>
                   </div>
-                  <div className="flex items-center">
-                    <Clock className="h-4 w-4 mr-1 text-secondary-600" />
-                    <span>May 2020 - Present</span>
-                  </div>
-                </div>
-                <p className="text-gray-600 mb-4">
-                  Leading a team of 18 engineers across Finance Operations, Supply Chain Management, and People Operations domains at Livspace, a unicorn in the interior design sector with a portfolio of $200M.
-                </p>
-                
-                <h4 className="font-bold text-gray-800 mb-2 mt-6">Key Business Achievements:</h4>
-                <ul className="space-y-2 mb-4">
-                  <li className="flex gap-3">
-                    <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
-                    <span className="text-gray-600">Optimized last-mile deliveries reducing warehouse and transportation costs by 1.6 CR/yr</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
-                    <span className="text-gray-600">Introduced proof-of-delivery reducing short/wrong supply by 80%, saving 2.6 CR/yr</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
-                    <span className="text-gray-600">Automated finance ops processes for accounts receivable and payable, saving 1 CR/yr</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
-                    <span className="text-gray-600">Scaled Livspace's Home Services platform from 1 to 10x, serving 1000+ DAUs</span>
-                  </li>
-                </ul>
-                
-                <h4 className="font-bold text-gray-800 mb-2 mt-6">Technical Leadership:</h4>
-                <ul className="space-y-2 mb-4">
-                  <li className="flex gap-3">
-                    <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
-                    <span className="text-gray-600">Led revamp of livspace.com/in/magazine and livspace.com/in/design-ideas to drive better adoption</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
-                    <span className="text-gray-600">Led development of content management system (CMS) for organization to be consumed by 10+ apps</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
-                    <span className="text-gray-600">Led development for marketplace web-app and app to enable growth of business</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
-                    <span className="text-gray-600">Core contributor to in-house micro-frontend architecture-based apps</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
-                    <span className="text-gray-600">Core contributor to design system, powering 13+ apps</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
-                    <span className="text-gray-600">Led Finance operations workflow automation to bring efficiency of team</span>
-                  </li>
-                </ul>
-                
-                <div className="flex flex-wrap gap-2 mt-4">
-                  <Badge variant="secondary" className="bg-secondary-100 text-secondary-800">Java</Badge>
-                  <Badge variant="secondary" className="bg-secondary-100 text-secondary-800">Python</Badge>
-                  <Badge variant="secondary" className="bg-secondary-100 text-secondary-800">Golang</Badge>
-                  <Badge variant="secondary" className="bg-secondary-100 text-secondary-800">NodeJS</Badge>
-                  <Badge variant="secondary" className="bg-secondary-100 text-secondary-800">VueJS</Badge>
-                  <Badge variant="secondary" className="bg-secondary-100 text-secondary-800">ReactJS</Badge>
-                  <Badge variant="secondary" className="bg-secondary-100 text-secondary-800">AWS</Badge>
                 </div>
               </div>
               <div className="w-full md:w-1/4 flex justify-center">
-                <div className="w-24 h-24 rounded-full bg-secondary-100 flex items-center justify-center">
+                <div className="w-24 h-24 rounded-full bg-secondary-100 flex items-center justify-center animate-pulse-slow">
                   <svg viewBox="0 0 100 60" className="w-16 h-16">
                     <text x="10" y="40" fill="#0a91aa" fontSize="20" fontWeight="bold">Livspace</text>
                   </svg>
@@ -109,47 +117,49 @@ export default function Experience() {
           <div className="mb-20">
             <div className="flex flex-col-reverse md:flex-row gap-8 items-center md:items-start">
               <div className="w-full md:w-3/4">
-                <h3 className="text-2xl font-bold font-heading mb-2 text-gray-900">Software Engineer</h3>
-                <div className="flex flex-wrap gap-4 mb-4 text-gray-600">
-                  <div className="flex items-center">
-                    <Building className="h-4 w-4 mr-1 text-secondary-600" />
-                    <span>Deutsche Telekom</span>
+                <div className="p-6 rounded-2xl transition-all duration-300 hover:bg-gray-50 hover:shadow-lg hover:translate-y-[-5px]">
+                  <h3 className="text-2xl font-bold font-heading mb-2 text-gray-900">Software Engineer</h3>
+                  <div className="flex flex-wrap gap-4 mb-4 text-gray-600">
+                    <div className="flex items-center">
+                      <Building className="h-4 w-4 mr-1 text-secondary-600" />
+                      <span>Deutsche Telekom</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Clock className="h-4 w-4 mr-1 text-secondary-600" />
+                      <span>Aug 2018 - March 2020</span>
+                    </div>
                   </div>
-                  <div className="flex items-center">
-                    <Clock className="h-4 w-4 mr-1 text-secondary-600" />
-                    <span>Aug 2018 - March 2020</span>
+                  <p className="text-gray-600 mb-4">
+                    Worked at a global telecommunications leader catering to a $30-35 billion enterprise market segment.
+                  </p>
+                
+                  <h4 className="font-bold text-gray-800 mb-2 mt-6">Key Projects:</h4>
+                  <ul className="space-y-2 mb-4">
+                    <li className="flex gap-3">
+                      <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
+                      <span className="text-gray-600">Built an e-commerce platform with a team of 4 members from scratch, deployed to 12 different countries serving 30 million users</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
+                      <span className="text-gray-600">Developed cart/basket and checkout module single-handedly</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
+                      <span className="text-gray-600">Created a component-based UI library for ready-to-use components, reducing development time from 6 to 4 months</span>
+                    </li>
+                  </ul>
+                  
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    <Badge variant="secondary" className="bg-secondary-100 text-secondary-800">React</Badge>
+                    <Badge variant="secondary" className="bg-secondary-100 text-secondary-800">Redux</Badge>
+                    <Badge variant="secondary" className="bg-secondary-100 text-secondary-800">NextJS</Badge>
+                    <Badge variant="secondary" className="bg-secondary-100 text-secondary-800">GraphQL</Badge>
+                    <Badge variant="secondary" className="bg-secondary-100 text-secondary-800">Java</Badge>
                   </div>
-                </div>
-                <p className="text-gray-600 mb-4">
-                  Worked at a global telecommunications leader catering to a $30-35 billion enterprise market segment.
-                </p>
-                
-                <h4 className="font-bold text-gray-800 mb-2 mt-6">Key Projects:</h4>
-                <ul className="space-y-2 mb-4">
-                  <li className="flex gap-3">
-                    <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
-                    <span className="text-gray-600">Built an e-commerce platform with a team of 4 members from scratch, deployed to 12 different countries serving 30 million users</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
-                    <span className="text-gray-600">Developed cart/basket and checkout module single-handedly</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
-                    <span className="text-gray-600">Created a component-based UI library for ready-to-use components, reducing development time from 6 to 4 months</span>
-                  </li>
-                </ul>
-                
-                <div className="flex flex-wrap gap-2 mt-4">
-                  <Badge variant="secondary" className="bg-secondary-100 text-secondary-800">React</Badge>
-                  <Badge variant="secondary" className="bg-secondary-100 text-secondary-800">Redux</Badge>
-                  <Badge variant="secondary" className="bg-secondary-100 text-secondary-800">NextJS</Badge>
-                  <Badge variant="secondary" className="bg-secondary-100 text-secondary-800">GraphQL</Badge>
-                  <Badge variant="secondary" className="bg-secondary-100 text-secondary-800">Java</Badge>
                 </div>
               </div>
               <div className="w-full md:w-1/4 flex justify-center">
-                <div className="w-24 h-24 rounded-full bg-secondary-100 flex items-center justify-center">
+                <div className="w-24 h-24 rounded-full bg-secondary-100 flex items-center justify-center animate-pulse-slow">
                   <svg viewBox="0 0 100 100" className="w-16 h-16">
                     <text x="10" y="50" fill="#e20074" fontSize="14" fontWeight="bold">Deutsche</text>
                     <text x="10" y="70" fill="#e20074" fontSize="14" fontWeight="bold">Telekom</text>
@@ -163,46 +173,48 @@ export default function Experience() {
           <div>
             <div className="flex flex-col-reverse md:flex-row gap-8 items-center md:items-start">
               <div className="w-full md:w-3/4">
-                <h3 className="text-2xl font-bold font-heading mb-2 text-gray-900">Software Engineer</h3>
-                <div className="flex flex-wrap gap-4 mb-4 text-gray-600">
-                  <div className="flex items-center">
-                    <Building className="h-4 w-4 mr-1 text-secondary-600" />
-                    <span>Sapient Consulting Limited</span>
+                <div className="p-6 rounded-2xl transition-all duration-300 hover:bg-gray-50 hover:shadow-lg hover:translate-y-[-5px]">
+                  <h3 className="text-2xl font-bold font-heading mb-2 text-gray-900">Software Engineer</h3>
+                  <div className="flex flex-wrap gap-4 mb-4 text-gray-600">
+                    <div className="flex items-center">
+                      <Building className="h-4 w-4 mr-1 text-secondary-600" />
+                      <span>Sapient Consulting Limited</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Clock className="h-4 w-4 mr-1 text-secondary-600" />
+                      <span>Oct 2016 - July 2018</span>
+                    </div>
                   </div>
-                  <div className="flex items-center">
-                    <Clock className="h-4 w-4 mr-1 text-secondary-600" />
-                    <span>Oct 2016 - July 2018</span>
+                  <p className="text-gray-600 mb-4">
+                    Worked at a leading digital transformation firm serving a $15-20 billion global consulting market segment.
+                  </p>
+                
+                  <h4 className="font-bold text-gray-800 mb-2 mt-6">Key Projects:</h4>
+                  <ul className="space-y-2 mb-4">
+                    <li className="flex gap-3">
+                      <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
+                      <span className="text-gray-600">Developed UI components for Marriott International Website with a team of 4 frontend and 3 backend developers</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
+                      <span className="text-gray-600">Integrated UI components with backend REST APIs to build web pages</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
+                      <span className="text-gray-600">Developed an internal Hiring Calendar tool to streamline interviewer and interviewee matching, reducing manual work by 80%</span>
+                    </li>
+                  </ul>
+                  
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    <Badge variant="secondary" className="bg-secondary-100 text-secondary-800">Handlebars</Badge>
+                    <Badge variant="secondary" className="bg-secondary-100 text-secondary-800">SCSS</Badge>
+                    <Badge variant="secondary" className="bg-secondary-100 text-secondary-800">jQuery</Badge>
+                    <Badge variant="secondary" className="bg-secondary-100 text-secondary-800">Angular 2.0</Badge>
                   </div>
-                </div>
-                <p className="text-gray-600 mb-4">
-                  Worked at a leading digital transformation firm serving a $15-20 billion global consulting market segment.
-                </p>
-                
-                <h4 className="font-bold text-gray-800 mb-2 mt-6">Key Projects:</h4>
-                <ul className="space-y-2 mb-4">
-                  <li className="flex gap-3">
-                    <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
-                    <span className="text-gray-600">Developed UI components for Marriott International Website with a team of 4 frontend and 3 backend developers</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
-                    <span className="text-gray-600">Integrated UI components with backend REST APIs to build web pages</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />
-                    <span className="text-gray-600">Developed an internal Hiring Calendar tool to streamline interviewer and interviewee matching, reducing manual work by 80%</span>
-                  </li>
-                </ul>
-                
-                <div className="flex flex-wrap gap-2 mt-4">
-                  <Badge variant="secondary" className="bg-secondary-100 text-secondary-800">Handlebars</Badge>
-                  <Badge variant="secondary" className="bg-secondary-100 text-secondary-800">SCSS</Badge>
-                  <Badge variant="secondary" className="bg-secondary-100 text-secondary-800">jQuery</Badge>
-                  <Badge variant="secondary" className="bg-secondary-100 text-secondary-800">Angular 2.0</Badge>
                 </div>
               </div>
               <div className="w-full md:w-1/4 flex justify-center">
-                <div className="w-24 h-24 rounded-full bg-secondary-100 flex items-center justify-center">
+                <div className="w-24 h-24 rounded-full bg-secondary-100 flex items-center justify-center animate-pulse-slow">
                   <svg viewBox="0 0 100 100" className="w-16 h-16">
                     <text x="10" y="50" fill="#0a91aa" fontSize="16" fontWeight="bold">Sapient</text>
                   </svg>
@@ -213,12 +225,12 @@ export default function Experience() {
           
           {/* Technical Skills Section */}
           <div className="mt-16">
-            <Card className="shadow-lg">
+            <Card className="shadow-lg hover:shadow-xl transition-all duration-300">
               <CardContent className="p-8">
                 <h3 className="text-xl font-bold font-heading mb-4 text-gray-900">Technical Expertise</h3>
                 <div className="flex flex-wrap gap-2">
                   {TECHNICAL_SKILLS.map((skill, index) => (
-                    <Badge key={index} variant="secondary" className="bg-secondary-100 text-secondary-800 hover:bg-secondary-200">
+                    <Badge key={index} variant="secondary" className="bg-secondary-100 text-secondary-800 hover:bg-secondary-200 transition-all duration-300 hover:translate-y-[-2px]">
                       {skill}
                     </Badge>
                   ))}
