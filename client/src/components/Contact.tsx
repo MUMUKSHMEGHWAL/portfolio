@@ -1,5 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { Mail, Linkedin } from 'lucide-react';
+import { Mail, Linkedin, Phone } from 'lucide-react';
 import { SOCIAL_LINKS, CONTACT_INFO } from '@/lib/constants';
 
 export default function Contact() {
@@ -39,6 +39,18 @@ export default function Contact() {
                   </div>
                   
                   <div className="flex items-center p-4 bg-gray-700/30 rounded-xl">
+                    <div className="w-12 h-12 rounded-full bg-secondary-100 flex items-center justify-center flex-shrink-0">
+                      <Phone className="h-5 w-5 text-secondary-600" />
+                    </div>
+                    <div className="ml-4">
+                      <h4 className="font-medium text-gray-100">Phone</h4>
+                      <a href={`tel:${CONTACT_INFO.PHONE}`} className="text-secondary-400 hover:text-secondary-300 transition-colors">
+                        {CONTACT_INFO.PHONE}
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center p-4 bg-gray-700/30 rounded-xl md:col-span-2">
                     <div className="w-12 h-12 rounded-full bg-secondary-100 flex items-center justify-center flex-shrink-0">
                       <Linkedin className="h-5 w-5 text-secondary-600" />
                     </div>
