@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import { useEffect } from "react";
+import PageTransition from "@/components/PageTransition";
 
 function Router() {
   // Navigation scroll handler
@@ -25,10 +26,12 @@ function Router() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="font-sans">
-        <Router />
-        <Toaster />
-      </div>
+      <PageTransition>
+        <div className="font-sans">
+          <Router />
+          <Toaster />
+        </div>
+      </PageTransition>
     </QueryClientProvider>
   );
 }
