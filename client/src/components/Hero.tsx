@@ -37,6 +37,7 @@ export default function Hero() {
                 src="/images/profile.jpg" 
                 alt="Mumuksh Meghwal" 
                 className="w-full h-full object-cover object-center"
+                onError={(e) => console.error("Image failed to load", e)}
               />
             </div>
           </div>
