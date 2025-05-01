@@ -13,10 +13,7 @@ export default function Hero() {
                 <span className="text-secondary-600 block md:inline"> Professional</span>
                 <span className="block text-3xl md:text-4xl mt-2 text-gray-700">at Livspace</span>
               </h1>
-              <p className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
-                8 years of experience building supply chain and finance products across B2B and D2C models, with expertise in Finance Operations, Supply Chain Management, and People Operations domains.
-              </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 mt-8">
                 <Button 
                   variant="default" 
                   size="lg"
@@ -31,7 +28,7 @@ export default function Hero() {
                   className="border-gray-300 hover:border-secondary-600 hover:text-secondary-600 text-gray-700"
                   onClick={() => scrollToElement('contact')}
                 >
-                  Get in Touch
+                  Let's Connect
                 </Button>
               </div>
             </div>

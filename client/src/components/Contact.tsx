@@ -116,9 +116,8 @@ export default function Contact() {
             
             <Card className="bg-gray-800 text-white rounded-2xl shadow-lg border-none">
               <CardContent className="p-8">
-                <h3 className="text-xl font-bold font-heading mb-6">Let's Connect</h3>
                 <p className="mb-6">
-                  With 8 years of experience in product and technology leadership, I'm passionate about delivering high-impact solutions across finance operations, supply chain management, and people operations domains.
+                  Let's connect to discuss how my expertise in product and technology leadership can help drive innovation and growth for your organization.
                 </p>
                 <div className="flex space-x-4">
                   <SocialButton href={SOCIAL_LINKS.LINKEDIN} icon={<Linkedin className="h-5 w-5" />} />
