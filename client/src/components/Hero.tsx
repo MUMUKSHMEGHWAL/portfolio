@@ -7,17 +7,17 @@ export default function Hero() {
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-16">
-            <div className="w-full lg:w-3/5">
+            <div className="w-full lg:w-3/5 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-6 leading-tight text-gray-900">
                 Product & Tech Lead
-                <span className="text-secondary-600 block md:inline"> Professional</span>
-                <span className="block text-3xl md:text-4xl mt-2 text-gray-700">at Livspace</span>
+                <span className="text-secondary-600 block md:inline animate-fade-in" style={{ animationDelay: '0.6s' }}> Professional</span>
+                <span className="block text-3xl md:text-4xl mt-2 text-gray-700 animate-fade-in" style={{ animationDelay: '0.9s' }}>at Livspace</span>
               </h1>
-              <div className="flex flex-wrap gap-4 mt-8">
+              <div className="flex flex-wrap gap-4 mt-8 animate-fade-in" style={{ animationDelay: '1.2s' }}>
                 <Button 
                   variant="default" 
                   size="lg"
-                  className="bg-secondary-600 hover:bg-secondary-700 shadow-lg shadow-secondary-600/20"
+                  className="bg-secondary-600 hover:bg-secondary-700 shadow-lg shadow-secondary-600/20 transition-all duration-300 hover:scale-105"
                   onClick={() => scrollToElement('domains')}
                 >
                   Explore My Work
@@ -25,14 +25,14 @@ export default function Hero() {
                 <Button 
                   variant="outline" 
                   size="lg"
-                  className="border-gray-300 hover:border-secondary-600 hover:text-secondary-600 text-gray-700"
+                  className="border-gray-300 hover:border-secondary-600 hover:text-secondary-600 text-gray-700 transition-all duration-300 hover:scale-105"
                   onClick={() => scrollToElement('contact')}
                 >
                   Let's Connect
                 </Button>
               </div>
             </div>
-            <div className="w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-4 border-secondary-100 shadow-xl">
+            <div className="w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-4 border-secondary-100 shadow-xl animate-fade-in" style={{ animationDelay: '0.4s' }}>
               <img 
                 src="/images/profile.jpg" 
                 alt="Mumuksh Meghwal" 

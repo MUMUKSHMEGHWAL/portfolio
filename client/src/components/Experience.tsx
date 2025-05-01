@@ -15,7 +15,7 @@ export default function Experience() {
           </div>
 
           {/* Livspace Experience */}
-          <div className="mb-20">
+          <div className="mb-20 opacity-0" data-scroll="fade-in-up" data-scroll-once="true">
             <div className="flex flex-col-reverse md:flex-row gap-8 items-center md:items-start">
               <div className="w-full md:w-3/4">
                 <div className="p-6 rounded-2xl transition-all duration-300 hover:bg-gray-50 hover:shadow-lg hover:translate-y-[-5px]">
@@ -114,7 +114,7 @@ export default function Experience() {
           </div>
           
           {/* Deutsche Telekom Experience */}
-          <div className="mb-20">
+          <div className="mb-20 opacity-0" data-scroll="fade-in-up" data-scroll-once="true" data-scroll-delay="0.2">
             <div className="flex flex-col-reverse md:flex-row gap-8 items-center md:items-start">
               <div className="w-full md:w-3/4">
                 <div className="p-6 rounded-2xl transition-all duration-300 hover:bg-gray-50 hover:shadow-lg hover:translate-y-[-5px]">

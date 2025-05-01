@@ -25,14 +25,36 @@ export function isElementInView(el: HTMLElement, dividend = 1): boolean {
 
 // Handle scroll animations
 export function setupScrollAnimations() {
-  const scrollElements = document.querySelectorAll(".scroll-fade");
+  // Get all elements with data-scroll attribute
+  const scrollElements = document.querySelectorAll("[data-scroll]");
   
   const displayScrollElement = (element: Element) => {
-    element.classList.add("show");
+    // Get animation type from data attribute
+    const animationType = element.getAttribute("data-scroll") || "fade-in-up";
+    // Get delay from data attribute (if any)
+    const delay = element.getAttribute("data-scroll-delay") || "0";
+    
+    // Apply inline style for delay
+    (element as HTMLElement).style.animationDelay = `${delay}s`;
+    
+    // Add appropriate animation class
+    element.classList.add(`animate-${animationType}`);
+    element.classList.remove("opacity-0");
+    element.classList.add("animate-running");
   };
   
   const hideScrollElement = (element: Element) => {
-    element.classList.remove("show");
+    // If element should only animate once when in view
+    if (element.getAttribute("data-scroll-once") === "true") {
+      return;
+    }
+    
+    // Otherwise, remove animation classes
+    if (!element.classList.contains("animate-running")) {
+      element.classList.add("opacity-0");
+      const animationType = element.getAttribute("data-scroll") || "fade-in-up";
+      element.classList.remove(`animate-${animationType}`);
+    }
   };
   
   const handleScrollAnimation = () => {
@@ -46,7 +68,9 @@ export function setupScrollAnimations() {
   };
   
   window.addEventListener("scroll", handleScrollAnimation);
-  handleScrollAnimation(); // Check on page load
+  
+  // Initial check to show elements already in view
+  setTimeout(handleScrollAnimation, 100);
   
   // Cleanup function
   return () => {
