@@ -56,7 +56,6 @@ export default function Footer() {
               <FooterLink href="#home">Home</FooterLink>
               <FooterLink href="#experience">Experience</FooterLink>
               <FooterLink href="#domains">Domains</FooterLink>
-              <FooterLink href="#resume">Resume</FooterLink>
               <FooterLink href="#contact">Contact</FooterLink>
             </div>
           </div>

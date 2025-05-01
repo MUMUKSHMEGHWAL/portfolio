@@ -62,10 +62,10 @@ export default function Experience() {
                 <CardContent className="p-8">
                   <h3 className="text-xl font-bold font-heading mb-4 text-gray-900">About My Role</h3>
                   <p className="text-gray-600 mb-4">
-                    As a Product and Tech Lead at Livspace, I bridge the gap between business needs and technology solutions. I collaborate with cross-functional teams to design, develop, and implement innovative solutions that drive operational efficiency and business growth.
+                    As a Product and Tech Lead at Livspace, I lead a team of 18 engineers across 3 business charters: Finance Operations, Supply Chain, and People Operations. I'm responsible for designing, developing, and implementing innovative solutions that drive operational efficiency and business growth.
                   </p>
                   <p className="text-gray-600">
-                    My expertise spans across multiple domains, allowing me to understand complex business requirements and translate them into scalable technological implementations.
+                    My work has resulted in significant business impact including saving 2.6 CR/yr through proof-of-delivery implementation, reducing vendor payout time by 85%, and optimizing last-mile deliveries to save 1.6 CR/yr in warehouse and transportation costs.
                   </p>
                 </CardContent>
               </Card>
@@ -75,11 +75,11 @@ export default function Experience() {
                   <h3 className="text-xl font-bold font-heading mb-4 text-gray-900">Key Responsibilities</h3>
                   <ul className="space-y-3">
                     {[
-                      "Leading product development lifecycle from concept to launch",
-                      "Defining technical architecture and implementation strategy",
-                      "Collaborating with stakeholders to understand business requirements",
-                      "Managing cross-functional teams to deliver high-quality solutions",
-                      "Implementing best practices for scalable, maintainable code"
+                      "Leading team of 18 headcount engineering team with 7 key stakeholders",
+                      "Driving product development from research to release and GTM",
+                      "Aligning cross-functional stakeholders with diverse points of view",
+                      "Building micro-frontend architecture-based applications",
+                      "Contributing to in-house design system powering 13+ apps"
                     ].map((responsibility, index) => (
                       <li key={index} className="flex gap-3">
                         <Check className="h-5 w-5 text-secondary-600 flex-shrink-0" />

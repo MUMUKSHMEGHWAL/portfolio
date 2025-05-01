@@ -41,24 +41,24 @@ export const DOMAIN_DATA: Record<DomainTab, DomainInfo> = {
     title: "Finance Operations",
     shortDescription: "Streamlining financial processes and implementing systems that improve accuracy, efficiency, and visibility.",
     achievements: [
-      "Automated invoice processing, reducing manual effort by 65%",
-      "Developed real-time financial dashboards for executive decision making",
-      "Implemented payment reconciliation system saving 20+ hours weekly"
+      "Increased financial reconciliation from 30% to 75%, saving 2+ CR/yr in excess GST paid",
+      "Automated finance operations processes for accounts receivable and payable, saving 1 CR/yr",
+      "Introduced vendor wallet reducing payout TAT by 85% (from 30-45 days to 10 days)"
     ],
     projects: [
       {
-        title: "Automated Invoice Processing System",
-        description: "Designed and implemented an end-to-end system that automates the invoice processing workflow from receipt to payment.",
-        tags: ["OCR Technology", "Workflow Automation", "Integration APIs"]
+        title: "Vendor Wallet System",
+        description: "Developed a wallet system to reduce vendor payout time and implemented penalty and incentive structure to improve vendor performance.",
+        tags: ["Payment Processing", "Vendor Management", "Financial Automation"]
       },
       {
-        title: "Financial Analytics Dashboard",
-        description: "Created comprehensive analytics tools with real-time reporting capabilities to provide actionable insights for financial decision-making.",
-        tags: ["Data Visualization", "Predictive Analytics", "Real-time Reporting"]
+        title: "Financial Compliance Dashboard",
+        description: "Implemented cost control and margin tracking mechanisms with comprehensive dashboards for executive decision making.",
+        tags: ["Data Visualization", "Compliance Monitoring", "Margin Analysis"]
       },
       {
-        title: "Payment Reconciliation Platform",
-        description: "Developed a system to automate payment matching and reconciliation, significantly reducing manual effort and error rates.",
+        title: "Accounts Reconciliation Platform",
+        description: "Created a system to automate financial reconciliation, significantly reducing manual effort and saving 10 man-days.",
         tags: ["Algorithm Design", "Banking APIs", "Exception Handling"]
       }
     ]
@@ -68,25 +68,25 @@ export const DOMAIN_DATA: Record<DomainTab, DomainInfo> = {
     title: "Supply Chain Management",
     shortDescription: "Optimizing supply chain operations through technology solutions that enhance visibility, efficiency, and decision-making.",
     achievements: [
-      "Implemented real-time inventory tracking reducing stockouts by 35%",
-      "Created vendor management portal improving communication efficiency",
-      "Designed logistics optimization system reducing delivery times by 22%"
+      "Introduced proof-of-delivery reducing short/wrong supply by 80%, saving 2.6 CR/yr",
+      "Optimized last-mile deliveries with route optimization, reducing warehouse and transportation costs by 1.6 CR/yr",
+      "Enabled 2-10% direct vendor-to-customer deliveries, eliminating intermediate warehouse costs"
     ],
     projects: [
       {
-        title: "Inventory Management System",
-        description: "Built a comprehensive inventory tracking system with real-time updates, automated reordering, and predictive analytics for stock optimization.",
-        tags: ["IoT Integration", "Machine Learning", "Real-time Updates"]
+        title: "Proof-of-Delivery System",
+        description: "Implemented a comprehensive proof-of-delivery system to track and verify deliveries, drastically reducing supply discrepancies.",
+        tags: ["Mobile Applications", "Digital Verification", "Real-time Updates"]
       },
       {
-        title: "Vendor Management Portal",
-        description: "Designed a centralized platform for vendor onboarding, performance tracking, communication, and document management.",
-        tags: ["Performance Analytics", "Secure Document Exchange", "Communication Tools"]
+        title: "Last-Mile Delivery Optimization",
+        description: "Designed route optimization algorithms to find optimal delivery paths, reducing transportation costs and improving delivery times.",
+        tags: ["Routing Algorithms", "Geospatial Analysis", "Logistics Planning"]
       },
       {
-        title: "Logistics Optimization Platform",
-        description: "Developed a route optimization system with real-time tracking and analytics to reduce delivery times and transportation costs.",
-        tags: ["GPS Integration", "Route Algorithms", "Mobile Applications"]
+        title: "Direct Vendor Fulfillment Platform",
+        description: "Developed a platform to enable direct shipping from vendors to customers, bypassing warehouse operations for eligible orders.",
+        tags: ["Vendor Integration", "Order Management", "Fulfillment Rules"]
       }
     ]
   },
@@ -95,25 +95,25 @@ export const DOMAIN_DATA: Record<DomainTab, DomainInfo> = {
     title: "People Operations",
     shortDescription: "Enhancing HR processes and employee experience through innovative technology solutions and data-driven approaches.",
     achievements: [
-      "Built employee performance analytics system improving feedback cycles",
-      "Implemented automated onboarding platform reducing time-to-productivity",
-      "Developed skills management system for better resource allocation"
+      "Scaled Livspace's Home Services platform from 1 to 10x, streamlining workflows",
+      "Strengthened Role-Based Access Control (RBAC) for all sensitive systems",
+      "Implemented comprehensive audit logs across services for compliance"
     ],
     projects: [
       {
-        title: "Performance Management System",
-        description: "Created a comprehensive performance tracking platform with continuous feedback mechanisms, goal setting, and analytics.",
-        tags: ["OKR Framework", "360° Feedback", "Performance Analytics"]
+        title: "Home Services Platform Scaling",
+        description: "Led the expansion of Livspace's Home Services platform (Urban Company competitor), optimizing offline workflows for 1000+ DAUs.",
+        tags: ["Platform Scaling", "User Experience", "Service Management"]
       },
       {
-        title: "Automated Onboarding Platform",
-        description: "Designed a digital onboarding experience that streamlines documentation, training, and integration for new employees.",
-        tags: ["Document Management", "Learning Modules", "Progress Tracking"]
+        title: "Security & Access Management",
+        description: "Implemented robust role-based access controls and standardized workflows to align with public company expectations.",
+        tags: ["RBAC Implementation", "Security Compliance", "Permission Management"]
       },
       {
-        title: "Skills Management System",
-        description: "Developed a platform to track employee skills, certifications, and expertise to optimize project staffing and identify training needs.",
-        tags: ["Skills Mapping", "Resource Allocation", "Learning Recommendations"]
+        title: "Hiring Calendar System",
+        description: "Initiated and developed an internal hiring calendar tool that streamlined interviewer and interviewee matching, reducing TAT from a week to 1 day.",
+        tags: ["Process Automation", "Resource Scheduling", "Efficiency Optimization"]
       }
     ]
   }
@@ -142,12 +142,14 @@ export const LEADERSHIP_SKILLS: Skill[] = [
 // Technical Skills Tags
 export const TECHNICAL_SKILLS = [
   "Product Management",
-  "Tech Architecture",
-  "Agile Methodology",
-  "Frontend Development",
-  "Backend Systems",
-  "Database Design",
-  "API Integration",
-  "DevOps",
-  "Cloud Infrastructure"
+  "ReactJS",
+  "VueJS",
+  "Micro Frontend",
+  "NodeJS",
+  "Java",
+  "Golang",
+  "Python",
+  "Design Systems",
+  "AWS",
+  "CI/CD Pipelines"
 ];

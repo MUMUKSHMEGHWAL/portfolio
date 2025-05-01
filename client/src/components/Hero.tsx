@@ -10,10 +10,10 @@ export default function Hero() {
             <div className="w-full lg:w-3/5">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-6 leading-tight text-gray-900">
                 Product & Tech Lead
-                <span className="text-secondary-600 block md:inline"> with Domain Expertise</span>
+                <span className="text-secondary-600 block md:inline"> at Livspace</span>
               </h1>
               <p className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
-                I lead technology and product initiatives at Livspace, specializing in Finance Operations, Supply Chain Management, and People Operations.
+                8 years of experience building supply chain and finance products across B2B and D2C models, with expertise in Finance Operations, Supply Chain Management, and People Operations domains.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button 

@@ -69,131 +69,62 @@ export default function Contact() {
             <div className="w-20 h-1 bg-secondary-500 mx-auto mt-4"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <Card className="bg-white rounded-2xl shadow-lg mb-8">
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-bold font-heading mb-6 text-gray-900">Contact Information</h3>
-                  
-                  <div className="space-y-6">
-                    <div className="flex items-center">
-                      <div className="w-12 h-12 rounded-full bg-secondary-100 flex items-center justify-center flex-shrink-0">
-                        <Mail className="h-5 w-5 text-secondary-600" />
-                      </div>
-                      <div className="ml-4">
-                        <h4 className="font-medium text-gray-900">Email</h4>
-                        <a href={`mailto:${CONTACT_INFO.EMAIL}`} className="text-secondary-600 hover:underline">
-                          {CONTACT_INFO.EMAIL}
-                        </a>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center">
-                      <div className="w-12 h-12 rounded-full bg-secondary-100 flex items-center justify-center flex-shrink-0">
-                        <Linkedin className="h-5 w-5 text-secondary-600" />
-                      </div>
-                      <div className="ml-4">
-                        <h4 className="font-medium text-gray-900">LinkedIn</h4>
-                        <a href={SOCIAL_LINKS.LINKEDIN} target="_blank" rel="noopener noreferrer" className="text-secondary-600 hover:underline">
-                          linkedin.com/in/username
-                        </a>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center">
-                      <div className="w-12 h-12 rounded-full bg-secondary-100 flex items-center justify-center flex-shrink-0">
-                        <Github className="h-5 w-5 text-secondary-600" />
-                      </div>
-                      <div className="ml-4">
-                        <h4 className="font-medium text-gray-900">GitHub</h4>
-                        <a href={SOCIAL_LINKS.GITHUB} target="_blank" rel="noopener noreferrer" className="text-secondary-600 hover:underline">
-                          github.com/username
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-gray-800 text-white rounded-2xl shadow-lg border-none">
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-bold font-heading mb-6">Professional Profile</h3>
-                  <p className="mb-6">
-                    With extensive experience in product and technology leadership, I specialize in delivering high-impact solutions across various domains.
-                  </p>
-                  <div className="flex space-x-4">
-                    <SocialButton href={SOCIAL_LINKS.LINKEDIN} icon={<Linkedin className="h-5 w-5" />} />
-                    <SocialButton href={SOCIAL_LINKS.GITHUB} icon={<Github className="h-5 w-5" />} />
-                    <SocialButton href={SOCIAL_LINKS.TWITTER} icon={<Twitter className="h-5 w-5" />} />
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-            
-            <Card className="bg-white rounded-2xl shadow-lg">
+          <div className="max-w-4xl mx-auto">
+            <Card className="bg-white rounded-2xl shadow-lg mb-8">
               <CardContent className="p-8">
-                <h3 className="text-xl font-bold font-heading mb-6 text-gray-900">Send a Message</h3>
+                <h3 className="text-xl font-bold font-heading mb-6 text-gray-900">Contact Information</h3>
                 
-                <form onSubmit={handleSubmit}>
-                  <div className="mb-4">
-                    <Label htmlFor="name">Your Name</Label>
-                    <Input 
-                      id="name" 
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      className="mt-1"
-                      required
-                    />
+                <div className="space-y-6">
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 rounded-full bg-secondary-100 flex items-center justify-center flex-shrink-0">
+                      <Mail className="h-5 w-5 text-secondary-600" />
+                    </div>
+                    <div className="ml-4">
+                      <h4 className="font-medium text-gray-900">Email</h4>
+                      <a href={`mailto:${CONTACT_INFO.EMAIL}`} className="text-secondary-600 hover:underline">
+                        {CONTACT_INFO.EMAIL}
+                      </a>
+                    </div>
                   </div>
                   
-                  <div className="mb-4">
-                    <Label htmlFor="email">Email Address</Label>
-                    <Input 
-                      type="email" 
-                      id="email" 
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="mt-1"
-                      required
-                    />
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 rounded-full bg-secondary-100 flex items-center justify-center flex-shrink-0">
+                      <Linkedin className="h-5 w-5 text-secondary-600" />
+                    </div>
+                    <div className="ml-4">
+                      <h4 className="font-medium text-gray-900">LinkedIn</h4>
+                      <a href={SOCIAL_LINKS.LINKEDIN} target="_blank" rel="noopener noreferrer" className="text-secondary-600 hover:underline">
+                        linkedin.com/in/username
+                      </a>
+                    </div>
                   </div>
                   
-                  <div className="mb-4">
-                    <Label htmlFor="subject">Subject</Label>
-                    <Input 
-                      id="subject" 
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleChange}
-                      className="mt-1"
-                      required
-                    />
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 rounded-full bg-secondary-100 flex items-center justify-center flex-shrink-0">
+                      <Github className="h-5 w-5 text-secondary-600" />
+                    </div>
+                    <div className="ml-4">
+                      <h4 className="font-medium text-gray-900">GitHub</h4>
+                      <a href={SOCIAL_LINKS.GITHUB} target="_blank" rel="noopener noreferrer" className="text-secondary-600 hover:underline">
+                        github.com/username
+                      </a>
+                    </div>
                   </div>
-                  
-                  <div className="mb-6">
-                    <Label htmlFor="message">Message</Label>
-                    <Textarea 
-                      id="message" 
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      rows={4} 
-                      className="mt-1"
-                      required
-                    />
-                  </div>
-                  
-                  <Button 
-                    type="submit" 
-                    className="w-full bg-secondary-600 hover:bg-secondary-700"
-                    disabled={isSubmitting}
-                  >
-                    <Send className="mr-2 h-4 w-4" />
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
-                  </Button>
-                </form>
+                </div>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-gray-800 text-white rounded-2xl shadow-lg border-none">
+              <CardContent className="p-8">
+                <h3 className="text-xl font-bold font-heading mb-6">Let's Connect</h3>
+                <p className="mb-6">
+                  With 8 years of experience in product and technology leadership, I'm passionate about delivering high-impact solutions across finance operations, supply chain management, and people operations domains.
+                </p>
+                <div className="flex space-x-4">
+                  <SocialButton href={SOCIAL_LINKS.LINKEDIN} icon={<Linkedin className="h-5 w-5" />} />
+                  <SocialButton href={SOCIAL_LINKS.GITHUB} icon={<Github className="h-5 w-5" />} />
+                  <SocialButton href={SOCIAL_LINKS.TWITTER} icon={<Twitter className="h-5 w-5" />} />
+                </div>
               </CardContent>
             </Card>
           </div>

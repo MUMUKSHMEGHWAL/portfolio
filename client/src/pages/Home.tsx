@@ -3,7 +3,6 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Experience from '@/components/Experience';
 import DomainExpertise from '@/components/DomainExpertise';
-import Resume from '@/components/Resume';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import { setupScrollAnimations, setupNavLinkHighlight } from '@/lib/utils';
@@ -30,7 +29,6 @@ export default function Home() {
         <Hero />
         <Experience />
         <DomainExpertise />
-        <Resume />
         <Contact />
       </main>
       

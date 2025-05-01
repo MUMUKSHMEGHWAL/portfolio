@@ -75,7 +75,6 @@ export default function Header() {
     { href: '#home', label: 'Home' },
     { href: '#experience', label: 'Experience' },
     { href: '#domains', label: 'Domains' },
-    { href: '#resume', label: 'Resume' },
     { href: '#contact', label: 'Contact' }
   ];
 
