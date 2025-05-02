@@ -30,25 +30,25 @@ export default function DomainExpertise() {
           {/* Domain Tabs */}
           <div className="mb-12 opacity-0" data-scroll="fade-in-up" data-scroll-once="true" data-scroll-delay="0.2">
             <div className="max-w-3xl mx-auto">
-              <div className="flex overflow-x-auto md:grid md:grid-cols-3 md:gap-2">
-                <div className="flex-1 min-w-[200px]">
+              <div className="grid grid-cols-3 gap-2">
+                <div className="col-span-1">
                   <Button
                     variant="ghost"
-                    className={`w-full rounded-lg py-3 px-4 font-medium text-center transition-all duration-300 ${
+                    className={`w-full rounded-lg py-2 sm:py-3 px-2 sm:px-4 font-medium text-center transition-all duration-300 text-xs sm:text-sm md:text-base ${
                       activeTab === 'finance' 
                         ? 'bg-secondary-600 text-white shadow-md' 
                         : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
                     }`}
                     onClick={() => handleTabChange('finance')}
                   >
-                    <span>Finance Operations</span>
+                    <span>Finance</span>
                   </Button>
                 </div>
                 
-                <div className="flex-1 min-w-[200px]">
+                <div className="col-span-1">
                   <Button
                     variant="ghost"
-                    className={`w-full rounded-lg py-3 px-4 font-medium text-center transition-all duration-300 ${
+                    className={`w-full rounded-lg py-2 sm:py-3 px-2 sm:px-4 font-medium text-center transition-all duration-300 text-xs sm:text-sm md:text-base ${
                       activeTab === 'supply-chain' 
                         ? 'bg-secondary-600 text-white shadow-md' 
                         : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
@@ -59,17 +59,17 @@ export default function DomainExpertise() {
                   </Button>
                 </div>
                 
-                <div className="flex-1 min-w-[200px]">
+                <div className="col-span-1">
                   <Button
                     variant="ghost"
-                    className={`w-full rounded-lg py-3 px-4 font-medium text-center transition-all duration-300 ${
+                    className={`w-full rounded-lg py-2 sm:py-3 px-2 sm:px-4 font-medium text-center transition-all duration-300 text-xs sm:text-sm md:text-base ${
                       activeTab === 'people' 
                         ? 'bg-secondary-600 text-white shadow-md' 
                         : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
                     }`}
                     onClick={() => handleTabChange('people')}
                   >
-                    <span>People Operations</span>
+                    <span>People</span>
                   </Button>
                 </div>
               </div>
