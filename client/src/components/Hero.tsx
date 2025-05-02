@@ -32,14 +32,15 @@ export default function Hero() {
                 </Button>
               </div>
             </div>
-            <div className="w-52 h-52 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-secondary-100 shadow-xl animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <div className="w-52 h-52 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-xl overflow-hidden border-4 border-secondary-200 shadow-2xl animate-fade-in relative" style={{ animationDelay: '0.4s' }}>
               <img 
                 src="/images/profile.jpg" 
                 alt="Mumuksh Meghwal" 
-                className="w-full h-full object-cover object-top transform scale-110"
+                className="w-full h-full object-cover object-top transform scale-105"
                 style={{ objectPosition: "center 15%" }}
                 onError={(e) => console.error("Image failed to load", e)}
               />
+              <div className="absolute inset-0 shadow-inner"></div>
             </div>
           </div>
         </div>
