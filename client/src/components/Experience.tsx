@@ -181,7 +181,7 @@ export default function Experience() {
                   <div className="flex flex-wrap gap-4 mb-4 text-gray-600">
                     <div className="flex items-center">
                       <Building className="h-4 w-4 mr-1 text-secondary-600" />
-                      <span>Sapient Consulting Limited</span>
+                      <span>Publicis Sapient</span>
                     </div>
                     <div className="flex items-center">
                       <Clock className="h-4 w-4 mr-1 text-secondary-600" />
@@ -219,8 +219,8 @@ export default function Experience() {
               <div className="w-full md:w-1/4 flex justify-center items-start">
                 <div className="w-full max-w-[160px] bg-white rounded-lg shadow-md p-5 transform transition-all duration-300 hover:shadow-lg">
                   <img 
-                    src="/images/logos/sapient-logo-v2.svg" 
-                    alt="Sapient Logo" 
+                    src="/images/logos/publicis-sapient-logo.svg" 
+                    alt="Publicis Sapient Logo" 
                     className="w-full h-auto"
                   />
                 </div>
