@@ -103,10 +103,10 @@ export default function Experience() {
                   </div>
                 </div>
               </div>
-              <div className="w-full md:w-1/4 flex justify-center">
-                <div className="w-32 h-32 rounded-lg bg-white shadow-lg flex items-center justify-center p-4 animate-pulse-slow transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+              <div className="w-full md:w-1/4 flex justify-center items-start">
+                <div className="w-full max-w-[160px] bg-white rounded-lg shadow-md p-5 transform transition-all duration-300 hover:shadow-lg">
                   <img 
-                    src="/images/logos/livspace-logo.svg" 
+                    src="/images/logos/livspace-logo-v2.svg" 
                     alt="Livspace Logo" 
                     className="w-full h-auto"
                   />
@@ -160,10 +160,10 @@ export default function Experience() {
                   </div>
                 </div>
               </div>
-              <div className="w-full md:w-1/4 flex justify-center">
-                <div className="w-32 h-32 rounded-lg bg-white shadow-lg flex items-center justify-center p-4 animate-pulse-slow transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+              <div className="w-full md:w-1/4 flex justify-center items-start">
+                <div className="w-full max-w-[160px] bg-white rounded-lg shadow-md p-5 transform transition-all duration-300 hover:shadow-lg">
                   <img 
-                    src="/images/logos/deutsche-telekom-logo.svg" 
+                    src="/images/logos/deutsche-telekom-logo-v2.svg" 
                     alt="Deutsche Telekom Logo" 
                     className="w-full h-auto"
                   />
@@ -216,10 +216,10 @@ export default function Experience() {
                   </div>
                 </div>
               </div>
-              <div className="w-full md:w-1/4 flex justify-center">
-                <div className="w-32 h-32 rounded-lg bg-white shadow-lg flex items-center justify-center p-4 animate-pulse-slow transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+              <div className="w-full md:w-1/4 flex justify-center items-start">
+                <div className="w-full max-w-[160px] bg-white rounded-lg shadow-md p-5 transform transition-all duration-300 hover:shadow-lg">
                   <img 
-                    src="/images/logos/sapient-logo.svg" 
+                    src="/images/logos/sapient-logo-v2.svg" 
                     alt="Sapient Logo" 
                     className="w-full h-auto"
                   />

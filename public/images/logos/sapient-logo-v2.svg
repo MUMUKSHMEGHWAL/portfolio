@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="80" viewBox="0 0 300 80">
+  <defs>
+    <linearGradient id="sapientGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#005A84;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0086B3;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <g>
+    <path fill="url(#sapientGradient)" d="M39.9,16c15.5,0,28,12.5,28,28s-12.5,28-28,28S11.9,59.5,11.9,44S24.4,16,39.9,16z M39.9,56c6.6,0,12-5.4,12-12s-5.4-12-12-12s-12,5.4-12,12S33.3,56,39.9,56z"/>
+    <path fill="url(#sapientGradient)" d="M75.4,18h12v6c3-4.5,8.1-7.8,15.7-7.8c11.9,0,18.9,8,18.9,20v31h-12V38c0-7.4-3.4-11.2-10.3-11.2c-6.9,0-12.3,4.3-12.3,12.4v28h-12V18z"/>
+    <path fill="url(#sapientGradient)" d="M128.9,18h12v48h-12V18z"/>
+    <path fill="url(#sapientGradient)" d="M150.9,18h13l14.4,37.1l14.4-37.1h12.5l-21.3,48h-11.6L150.9,18z"/>
+    <path fill="url(#sapientGradient)" d="M210.9,18h12v48h-12V18z"/>
+    <path fill="url(#sapientGradient)" d="M232.9,18h12v6c3-4.5,8.1-7.8,15.7-7.8c11.9,0,18.9,8,18.9,20v31h-12V38c0-7.4-3.4-11.2-10.3-11.2c-6.9,0-12.3,4.3-12.3,12.4v28h-12V18z"/>
+  </g>
+</svg>
