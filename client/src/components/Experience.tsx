@@ -104,10 +104,12 @@ export default function Experience() {
                 </div>
               </div>
               <div className="w-full md:w-1/4 flex justify-center">
-                <div className="w-24 h-24 rounded-full bg-secondary-100 flex items-center justify-center animate-pulse-slow">
-                  <svg viewBox="0 0 100 60" className="w-16 h-16">
-                    <text x="10" y="40" fill="#0a91aa" fontSize="20" fontWeight="bold">Livspace</text>
-                  </svg>
+                <div className="w-32 h-32 rounded-lg bg-white shadow-lg flex items-center justify-center p-4 animate-pulse-slow transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                  <img 
+                    src="/images/logos/livspace-logo.svg" 
+                    alt="Livspace Logo" 
+                    className="w-full h-auto"
+                  />
                 </div>
               </div>
             </div>
@@ -159,11 +161,12 @@ export default function Experience() {
                 </div>
               </div>
               <div className="w-full md:w-1/4 flex justify-center">
-                <div className="w-24 h-24 rounded-full bg-secondary-100 flex items-center justify-center animate-pulse-slow">
-                  <svg viewBox="0 0 100 100" className="w-16 h-16">
-                    <text x="10" y="50" fill="#e20074" fontSize="14" fontWeight="bold">Deutsche</text>
-                    <text x="10" y="70" fill="#e20074" fontSize="14" fontWeight="bold">Telekom</text>
-                  </svg>
+                <div className="w-32 h-32 rounded-lg bg-white shadow-lg flex items-center justify-center p-4 animate-pulse-slow transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                  <img 
+                    src="/images/logos/deutsche-telekom-logo.svg" 
+                    alt="Deutsche Telekom Logo" 
+                    className="w-full h-auto"
+                  />
                 </div>
               </div>
             </div>
@@ -214,10 +217,12 @@ export default function Experience() {
                 </div>
               </div>
               <div className="w-full md:w-1/4 flex justify-center">
-                <div className="w-24 h-24 rounded-full bg-secondary-100 flex items-center justify-center animate-pulse-slow">
-                  <svg viewBox="0 0 100 100" className="w-16 h-16">
-                    <text x="10" y="50" fill="#0a91aa" fontSize="16" fontWeight="bold">Sapient</text>
-                  </svg>
+                <div className="w-32 h-32 rounded-lg bg-white shadow-lg flex items-center justify-center p-4 animate-pulse-slow transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                  <img 
+                    src="/images/logos/sapient-logo.svg" 
+                    alt="Sapient Logo" 
+                    className="w-full h-auto"
+                  />
                 </div>
               </div>
             </div>
