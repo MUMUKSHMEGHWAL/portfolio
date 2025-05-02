@@ -29,52 +29,49 @@ export default function DomainExpertise() {
 
           {/* Domain Tabs */}
           <div className="mb-12 opacity-0" data-scroll="fade-in-up" data-scroll-once="true" data-scroll-delay="0.2">
-            <div className="max-w-3xl mx-auto bg-white rounded-xl p-2 shadow-md">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
-                <Button
-                  variant="ghost"
-                  className={`rounded-lg py-3 px-4 font-medium text-center transition-all duration-300 ${
-                    activeTab === 'finance' 
-                      ? 'bg-secondary-600 text-white shadow-md' 
-                      : 'bg-white text-gray-700 hover:bg-gray-100'
-                  }`}
-                  onClick={() => handleTabChange('finance')}
-                >
-                  <div className="flex flex-col items-center justify-center">
-                    <span className="text-2xl mb-1">₹</span>
+            <div className="max-w-3xl mx-auto">
+              <div className="flex overflow-x-auto md:grid md:grid-cols-3 md:gap-2">
+                <div className="flex-1 min-w-[200px]">
+                  <Button
+                    variant="ghost"
+                    className={`w-full rounded-lg py-3 px-4 font-medium text-center transition-all duration-300 ${
+                      activeTab === 'finance' 
+                        ? 'bg-secondary-600 text-white shadow-md' 
+                        : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
+                    }`}
+                    onClick={() => handleTabChange('finance')}
+                  >
                     <span>Finance Operations</span>
-                  </div>
-                </Button>
+                  </Button>
+                </div>
                 
-                <Button
-                  variant="ghost"
-                  className={`rounded-lg py-3 px-4 font-medium text-center transition-all duration-300 ${
-                    activeTab === 'supply-chain' 
-                      ? 'bg-secondary-600 text-white shadow-md' 
-                      : 'bg-white text-gray-700 hover:bg-gray-100'
-                  }`}
-                  onClick={() => handleTabChange('supply-chain')}
-                >
-                  <div className="flex flex-col items-center justify-center">
-                    <span className="text-2xl mb-1">🔄</span>
+                <div className="flex-1 min-w-[200px]">
+                  <Button
+                    variant="ghost"
+                    className={`w-full rounded-lg py-3 px-4 font-medium text-center transition-all duration-300 ${
+                      activeTab === 'supply-chain' 
+                        ? 'bg-secondary-600 text-white shadow-md' 
+                        : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
+                    }`}
+                    onClick={() => handleTabChange('supply-chain')}
+                  >
                     <span>Supply Chain</span>
-                  </div>
-                </Button>
+                  </Button>
+                </div>
                 
-                <Button
-                  variant="ghost"
-                  className={`rounded-lg py-3 px-4 font-medium text-center transition-all duration-300 ${
-                    activeTab === 'people' 
-                      ? 'bg-secondary-600 text-white shadow-md' 
-                      : 'bg-white text-gray-700 hover:bg-gray-100'
-                  }`}
-                  onClick={() => handleTabChange('people')}
-                >
-                  <div className="flex flex-col items-center justify-center">
-                    <span className="text-2xl mb-1">👥</span>
+                <div className="flex-1 min-w-[200px]">
+                  <Button
+                    variant="ghost"
+                    className={`w-full rounded-lg py-3 px-4 font-medium text-center transition-all duration-300 ${
+                      activeTab === 'people' 
+                        ? 'bg-secondary-600 text-white shadow-md' 
+                        : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
+                    }`}
+                    onClick={() => handleTabChange('people')}
+                  >
                     <span>People Operations</span>
-                  </div>
-                </Button>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
