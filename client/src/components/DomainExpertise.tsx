@@ -29,82 +29,131 @@ export default function DomainExpertise() {
 
           {/* Domain Tabs */}
           <div className="mb-12 opacity-0" data-scroll="fade-in-up" data-scroll-once="true" data-scroll-delay="0.2">
-            <div className="flex flex-wrap justify-center gap-2 md:gap-4">
-              <Button
-                variant={activeTab === 'finance' ? 'default' : 'outline'} 
-                className={activeTab === 'finance' 
-                  ? 'bg-secondary-600 text-white transition-all duration-300 transform hover:scale-105' 
-                  : 'bg-white hover:bg-gray-100 border border-gray-200 text-gray-700 transition-all duration-300 transform hover:scale-105'}
-                onClick={() => handleTabChange('finance')}
-              >
-                Finance Operations
-              </Button>
-              <Button
-                variant={activeTab === 'supply-chain' ? 'default' : 'outline'} 
-                className={activeTab === 'supply-chain' 
-                  ? 'bg-secondary-600 text-white transition-all duration-300 transform hover:scale-105' 
-                  : 'bg-white hover:bg-gray-100 border border-gray-200 text-gray-700 transition-all duration-300 transform hover:scale-105'}
-                onClick={() => handleTabChange('supply-chain')}
-              >
-                Supply Chain Management
-              </Button>
-              <Button
-                variant={activeTab === 'people' ? 'default' : 'outline'} 
-                className={activeTab === 'people' 
-                  ? 'bg-secondary-600 text-white transition-all duration-300 transform hover:scale-105' 
-                  : 'bg-white hover:bg-gray-100 border border-gray-200 text-gray-700 transition-all duration-300 transform hover:scale-105'}
-                onClick={() => handleTabChange('people')}
-              >
-                People Operations
-              </Button>
+            <div className="max-w-3xl mx-auto bg-white rounded-xl p-2 shadow-md">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
+                <Button
+                  variant="ghost"
+                  className={`rounded-lg py-3 px-4 font-medium text-center transition-all duration-300 ${
+                    activeTab === 'finance' 
+                      ? 'bg-secondary-600 text-white shadow-md' 
+                      : 'bg-white text-gray-700 hover:bg-gray-100'
+                  }`}
+                  onClick={() => handleTabChange('finance')}
+                >
+                  <div className="flex flex-col items-center justify-center">
+                    <span className="text-2xl mb-1">₹</span>
+                    <span>Finance Operations</span>
+                  </div>
+                </Button>
+                
+                <Button
+                  variant="ghost"
+                  className={`rounded-lg py-3 px-4 font-medium text-center transition-all duration-300 ${
+                    activeTab === 'supply-chain' 
+                      ? 'bg-secondary-600 text-white shadow-md' 
+                      : 'bg-white text-gray-700 hover:bg-gray-100'
+                  }`}
+                  onClick={() => handleTabChange('supply-chain')}
+                >
+                  <div className="flex flex-col items-center justify-center">
+                    <span className="text-2xl mb-1">🔄</span>
+                    <span>Supply Chain</span>
+                  </div>
+                </Button>
+                
+                <Button
+                  variant="ghost"
+                  className={`rounded-lg py-3 px-4 font-medium text-center transition-all duration-300 ${
+                    activeTab === 'people' 
+                      ? 'bg-secondary-600 text-white shadow-md' 
+                      : 'bg-white text-gray-700 hover:bg-gray-100'
+                  }`}
+                  onClick={() => handleTabChange('people')}
+                >
+                  <div className="flex flex-col items-center justify-center">
+                    <span className="text-2xl mb-1">👥</span>
+                    <span>People Operations</span>
+                  </div>
+                </Button>
+              </div>
             </div>
           </div>
 
           {/* Domain Content */}
           <Card className="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-500 opacity-0" data-scroll="fade-in-up" data-scroll-once="true" data-scroll-delay="0.4">
-            <div className="md:flex">
-              <div className="md:w-2/5 bg-gray-800 text-white p-8">
-                <h3 className="text-2xl font-bold font-heading mb-4">{activeDomain.title}</h3>
-                <p className="text-gray-300 mb-6">
-                  {activeDomain.shortDescription}
-                </p>
-                
-                <h4 className="text-secondary-400 font-bold mb-3">Key Achievements:</h4>
-                <ul className="space-y-3">
-                  {activeDomain.achievements.map((achievement, index) => (
-                    <li 
-                      key={index} 
-                      className="flex gap-3 opacity-0 animate-slide-in-right"
-                      style={{ animationDelay: `${0.5 + (index * 0.15)}s` }}
-                    >
-                      <Check className="h-5 w-5 text-secondary-400 flex-shrink-0" />
-                      <span>{achievement}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              
-              {/* <div className="md:w-3/5 p-8">
-                <h4 className="text-xl font-bold font-heading mb-4 text-gray-900">Projects & Solutions</h4>
-                
-                <div className="space-y-6">
-                  {activeDomain.projects.map((project, index) => (
-                    <div key={index} className="card-hover rounded-xl bg-gray-50 p-6">
-                      <h5 className="font-bold text-gray-900 mb-2">{project.title}</h5>
-                      <p className="text-gray-600 mb-3">
-                        {project.description}
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        {project.tags.map((tag, tagIndex) => (
-                          <Badge key={tagIndex} variant="secondary" className="bg-secondary-100 text-secondary-800 text-sm">
-                            {tag}
-                          </Badge>
-                        ))}
-                      </div>
+            <div className="flex flex-col lg:flex-row">
+              <div className="w-full lg:w-full bg-gradient-to-br from-gray-800 to-gray-900 text-white p-6 md:p-8 lg:p-10">
+                <div className="flex flex-col md:flex-row md:items-start md:gap-8">
+                  {/* Domain Icon/Image */}
+                  <div className="hidden md:flex md:w-32 lg:w-40 h-32 items-center justify-center bg-gray-700/30 rounded-xl mb-6 md:mb-0 flex-shrink-0">
+                    <div className="text-5xl text-secondary-400 font-bold">
+                      {activeTab === 'finance' && '₹'}
+                      {activeTab === 'supply-chain' && '🔄'}
+                      {activeTab === 'people' && '👥'}
                     </div>
-                  ))}
+                  </div>
+                  
+                  {/* Domain Content */}
+                  <div className="flex-1">
+                    <h3 className="text-2xl md:text-3xl font-bold font-heading mb-4">{activeDomain.title}</h3>
+                    <p className="text-gray-300 mb-6 text-lg">
+                      {activeDomain.shortDescription}
+                    </p>
+                    
+                    <h4 className="text-secondary-400 font-bold mb-4 text-xl">Key Achievements:</h4>
+                    <ul className="space-y-4">
+                      {activeDomain.achievements.map((achievement, index) => (
+                        <li 
+                          key={index} 
+                          className="flex gap-3 opacity-0 animate-slide-in-right"
+                          style={{ animationDelay: `${0.5 + (index * 0.15)}s` }}
+                        >
+                          <div className="mt-1">
+                            <Check className="h-5 w-5 text-secondary-400 flex-shrink-0" />
+                          </div>
+                          <span className="text-gray-100">{achievement}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-              </div> */}
+                
+                {/* Key Technologies/Tools Section */}
+                <div className="mt-8 pt-6 border-t border-gray-700/50">
+                  <h4 className="text-secondary-400 font-bold mb-3">Technologies & Tools:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {activeTab === 'finance' && (
+                      <>
+                        <Badge className="bg-gray-700 text-secondary-300 hover:bg-gray-600">Java</Badge>
+                        <Badge className="bg-gray-700 text-secondary-300 hover:bg-gray-600">Python</Badge>
+                        <Badge className="bg-gray-700 text-secondary-300 hover:bg-gray-600">ReactJS</Badge>
+                        <Badge className="bg-gray-700 text-secondary-300 hover:bg-gray-600">PostgreSQL</Badge>
+                        <Badge className="bg-gray-700 text-secondary-300 hover:bg-gray-600">AWS</Badge>
+                      </>
+                    )}
+                    
+                    {activeTab === 'supply-chain' && (
+                      <>
+                        <Badge className="bg-gray-700 text-secondary-300 hover:bg-gray-600">Golang</Badge>
+                        <Badge className="bg-gray-700 text-secondary-300 hover:bg-gray-600">NodeJS</Badge>
+                        <Badge className="bg-gray-700 text-secondary-300 hover:bg-gray-600">MongoDB</Badge>
+                        <Badge className="bg-gray-700 text-secondary-300 hover:bg-gray-600">Google Maps API</Badge>
+                        <Badge className="bg-gray-700 text-secondary-300 hover:bg-gray-600">React Native</Badge>
+                      </>
+                    )}
+                    
+                    {activeTab === 'people' && (
+                      <>
+                        <Badge className="bg-gray-700 text-secondary-300 hover:bg-gray-600">VueJS</Badge>
+                        <Badge className="bg-gray-700 text-secondary-300 hover:bg-gray-600">Express</Badge>
+                        <Badge className="bg-gray-700 text-secondary-300 hover:bg-gray-600">Firebase</Badge>
+                        <Badge className="bg-gray-700 text-secondary-300 hover:bg-gray-600">Redux</Badge>
+                        <Badge className="bg-gray-700 text-secondary-300 hover:bg-gray-600">MySQL</Badge>
+                      </>
+                    )}
+                  </div>
+                </div>
+              </div>
             </div>
           </Card>
         </div>
