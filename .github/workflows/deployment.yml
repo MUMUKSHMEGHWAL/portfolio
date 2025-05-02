@@ -133,7 +133,7 @@
         - name: Upload artifact
           uses: actions/upload-pages-artifact@v3
           with:
-            path: ./dist/public
+            path: ./dist/index.js
             
     deploy:
       environment:
