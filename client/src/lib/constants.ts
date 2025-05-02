@@ -9,7 +9,7 @@ export const SOCIAL_LINKS = {
 // Contact Information
 export const CONTACT_INFO = {
   EMAIL: "mumukshmeghwal@gmail.com",
-  PHONE: "+91-992-250-104"
+  PHONE: "+91-9882-250-104"
 };
 
 // Resume File URLs
