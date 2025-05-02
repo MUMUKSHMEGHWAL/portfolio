@@ -106,7 +106,7 @@ export default function Experience() {
               <div className="w-full md:w-1/4 flex justify-center items-start">
                 <div className="w-full max-w-[160px] bg-white rounded-lg shadow-md p-5 transform transition-all duration-300 hover:shadow-lg">
                   <img 
-                    src="/images/logos/livspace-exact.svg" 
+                    src="/images/logos/liv_logo.png" 
                     alt="Livspace Logo" 
                     className="w-full h-auto"
                   />
@@ -161,9 +161,9 @@ export default function Experience() {
                 </div>
               </div>
               <div className="w-full md:w-1/4 flex justify-center items-start">
-                <div className="w-full max-w-[160px] bg-white rounded-lg shadow-md p-4 transform transition-all duration-300 hover:shadow-lg">
+                <div className="w-full max-w-[160px] bg-white rounded-lg shadow-md p-5 transform transition-all duration-300 hover:shadow-lg">
                   <img 
-                    src="/images/logos/deutsche-telekom-exact.svg" 
+                    src="/images/logos/telekom-logo.png" 
                     alt="Deutsche Telekom Logo" 
                     className="w-full h-auto"
                   />
@@ -219,7 +219,7 @@ export default function Experience() {
               <div className="w-full md:w-1/4 flex justify-center items-start">
                 <div className="w-full max-w-[160px] bg-white rounded-lg shadow-md p-5 transform transition-all duration-300 hover:shadow-lg">
                   <img 
-                    src="/images/logos/publicis-sapient-exact.svg" 
+                    src="/images/logos/publicis-sapient-logo.jpg" 
                     alt="Publicis Sapient Logo" 
                     className="w-full h-auto"
                   />
