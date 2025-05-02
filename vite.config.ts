@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default defineConfig({
-  base: "./dist",
+  base: "https://mumukshmeghwal.github.io/portfolio/dist",
   plugins: [
     react(),
     runtimeErrorOverlay(),
