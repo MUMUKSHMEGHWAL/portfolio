@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mumuksh Meghwal — Product Leader</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #fafafa;
+      --white: #ffffff;
+      --text: #0d0d0d;
+      --text-secondary: #374151;
+      --text-muted: #6b7280;
+      --accent: #6c3ce0;
+      --accent-hover: #5a2fd0;
+      --accent-bg: #f3eeff;
+      --border: #e5e7eb;
+      --border-subtle: #f0f0f0;
+      --radius: 12px;
+      --max-w: 1160px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(250,250,250,0.9);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s;
+    }
+    nav.scrolled { border-bottom-color: var(--border); }
+    .nav-inner {
+      max-width: var(--max-w); margin: 0 auto; padding: 0 2rem;
+      height: 60px; display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo {
+      font-size: 1rem; font-weight: 800; color: var(--text);
+      letter-spacing: -0.02em; text-decoration: none;
+    }
+    .nav-links {
+      display: flex; gap: 2rem; list-style: none; align-items: center;
+    }
+    .nav-links a {
+      font-size: 0.82rem; font-weight: 500; color: var(--text-muted);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      padding: 0.45rem 1.1rem; border-radius: 8px;
+      background: var(--accent); color: #fff !important;
+      font-weight: 600; font-size: 0.8rem;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--accent-hover) !important; }
+    .mobile-toggle {
+      display: none; background: none; border: none;
+      color: var(--text); cursor: pointer; font-size: 1.4rem;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh; display: flex; align-items: center;
+      padding: 7rem 2rem 3.5rem;
+      background: #fff;
+    }
+    .hero-inner {
+      max-width: var(--max-w); margin: 0 auto; width: 100%;
+    }
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--accent);
+      margin-bottom: 1.25rem;
+    }
+    .hero h1 {
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 900; letter-spacing: -0.04em;
+      line-height: 1.06; color: var(--text);
+      margin-bottom: 1.25rem;
+      max-width: 820px;
+    }
+    .hero-sub {
+      font-size: 1rem; color: var(--text-secondary);
+      line-height: 1.7; max-width: 520px;
+      margin-bottom: 2.5rem;
+    }
+
+    /* ── HERO STATS (inline authority) ── */
+    .hero-stats {
+      display: grid; grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      padding-top: 2.25rem;
+      border-top: 1px solid var(--border);
+    }
+    .hero-stat {
+      padding: 0 1.5rem;
+      border-right: 1px solid var(--border);
+    }
+    .hero-stat:first-child { padding-left: 0; }
+    .hero-stat:last-child { border-right: none; }
+    .hero-stat-num {
+      font-size: 1.5rem; font-weight: 900;
+      color: var(--accent); letter-spacing: -0.03em;
+      line-height: 1; margin-bottom: 0.3rem;
+    }
+    .hero-stat-label {
+      font-size: 0.7rem; color: var(--text-muted);
+      font-weight: 500; line-height: 1.35;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.45rem;
+      padding: 0.75rem 1.5rem; border-radius: 8px;
+      font-size: 0.875rem; font-weight: 600;
+      text-decoration: none; cursor: pointer;
+      border: none; font-family: inherit;
+      transition: all 0.2s;
+    }
+    .btn-primary {
+      background: var(--accent); color: #fff;
+    }
+    .btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); }
+    .btn-ghost {
+      background: transparent; color: var(--text);
+      border: 1.5px solid var(--border);
+    }
+    .btn-ghost:hover { border-color: #aaa; transform: translateY(-1px); }
+
+
+    /* ── SECTION COMMONS ── */
+    section { padding: 6rem 2rem; }
+    .section-inner { max-width: var(--max-w); margin: 0 auto; }
+    .section-label {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-size: clamp(1.75rem, 3vw, 2.4rem); font-weight: 900;
+      letter-spacing: -0.035em; line-height: 1.1;
+      margin-bottom: 1rem; color: var(--text);
+    }
+    .section-desc {
+      color: var(--text-secondary); font-size: 1rem;
+      line-height: 1.7; max-width: 560px; margin-bottom: 3.5rem;
+    }
+
+    /* ── WORK SECTION ── */
+    #work { background: var(--bg); }
+    .work-list { display: flex; flex-direction: column; gap: 2px; }
+
+    .work-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+      transition: border-color 0.25s, box-shadow 0.25s;
+    }
+    .work-card:last-child { margin-bottom: 0; }
+    .work-card:hover {
+      border-color: rgba(108,60,224,0.2);
+      box-shadow: 0 8px 32px rgba(108,60,224,0.06);
+    }
+    .work-card:hover .work-card-footer { opacity: 1; }
+    .work-card-footer {
+      display: flex; align-items: center; justify-content: flex-end;
+      padding: 0.875rem 2.5rem;
+      border-top: 1px solid var(--border-subtle);
+      opacity: 0; transition: opacity 0.2s;
+      font-size: 0.8rem; font-weight: 600; color: var(--accent);
+      gap: 0.35rem;
+    }
+
+    .work-card-grid {
+      display: grid; grid-template-columns: 1fr 380px;
+    }
+
+    /* LEFT 60% */
+    .work-left {
+      padding: 2.5rem 2.5rem 2.5rem;
+      border-right: 1px solid var(--border);
+    }
+    .work-tag {
+      display: inline-block;
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--accent);
+      background: var(--accent-bg);
+      padding: 0.2rem 0.55rem; border-radius: 4px;
+      margin-bottom: 0.75rem;
+    }
+    .work-left h3 {
+      font-size: 1.35rem; font-weight: 800;
+      letter-spacing: -0.02em; margin-bottom: 0.35rem;
+      color: var(--text);
+    }
+    .work-descriptor {
+      font-size: 0.9rem; color: var(--text-muted);
+      margin-bottom: 1.75rem; line-height: 1.5;
+    }
+
+    .work-block { margin-bottom: 1.5rem; }
+    .work-block:last-child { margin-bottom: 0; }
+    .work-block-label {
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .work-block p {
+      font-size: 0.88rem; color: var(--text-secondary); line-height: 1.65;
+    }
+    .work-block ul {
+      list-style: none; padding: 0;
+      display: flex; flex-direction: column; gap: 0.4rem;
+    }
+    .work-block ul li {
+      font-size: 0.88rem; color: var(--text-secondary); line-height: 1.55;
+      padding-left: 1.1rem; position: relative;
+    }
+    .work-block ul li::before {
+      content: '→'; position: absolute; left: 0;
+      color: var(--accent); font-size: 0.78rem; top: 0.05em;
+    }
+
+    /* Impact row */
+    .work-impact {
+      display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.75rem;
+      padding-top: 1.5rem; border-top: 1px solid var(--border-subtle);
+    }
+    .impact-chip {
+      display: inline-flex; align-items: baseline; gap: 0.3rem;
+    }
+    .impact-num {
+      font-size: 1.2rem; font-weight: 900; color: var(--accent);
+      letter-spacing: -0.02em;
+    }
+    .impact-desc {
+      font-size: 0.73rem; color: var(--text-muted); font-weight: 500;
+    }
+
+    /* RIGHT 40% */
+    .work-right {
+      padding: 2.5rem 2rem;
+      background: #fdfdfd;
+      display: flex; flex-direction: column; gap: 1.5rem;
+    }
+    .meta-block { display: block; }
+    .meta-label {
+      font-size: 0.62rem; font-weight: 700; letter-spacing: 0.09em;
+      text-transform: uppercase; color: var(--text-muted);
+      margin-bottom: 0.3rem;
+    }
+    .meta-value {
+      font-size: 0.875rem; color: var(--text-secondary);
+      font-weight: 500; line-height: 1.45;
+    }
+    .meta-divider {
+      height: 1px; background: var(--border-subtle);
+    }
+
+    /* ── SCOPE & SCALE ── */
+    #scope { background: var(--white); }
+    .scope-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem;
+    }
+    .scope-col h3 {
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.09em;
+      text-transform: uppercase; color: var(--accent);
+      margin-bottom: 1.5rem; padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--accent-bg);
+    }
+    .scope-item {
+      display: flex; gap: 1rem; align-items: flex-start;
+      padding: 0.9rem 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .scope-item:last-child { border-bottom: none; }
+    .scope-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--accent); flex-shrink: 0;
+      margin-top: 0.45rem;
+    }
+    .scope-item-text { display: block; }
+    .scope-item-title {
+      font-size: 0.9rem; font-weight: 600; color: var(--text);
+      margin-bottom: 0.15rem;
+    }
+    .scope-item-sub {
+      font-size: 0.8rem; color: var(--text-muted); line-height: 1.45;
+    }
+
+    /* ── PHILOSOPHY ── */
+    #philosophy { background: var(--bg); }
+    .philosophy-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;
+    }
+    .philosophy-card {
+      padding: 2rem 0;
+      border-top: 2px solid var(--border);
+      transition: border-color 0.2s;
+    }
+    .philosophy-card:hover { border-top-color: var(--accent); }
+    .philosophy-num {
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em;
+      color: var(--accent); margin-bottom: 1rem; opacity: 0.7;
+    }
+    .philosophy-card h4 {
+      font-size: 1.05rem; font-weight: 800; letter-spacing: -0.02em;
+      margin-bottom: 0.6rem; color: var(--text);
+    }
+    .philosophy-card p {
+      font-size: 0.875rem; color: var(--text-muted); line-height: 1.65;
+    }
+
+    /* ── WRITING ── */
+    #writing { background: var(--white); }
+    .writing-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+    }
+    .writing-card {
+      padding: 1.75rem;
+      border: 1px solid var(--border); border-radius: var(--radius);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      cursor: default;
+    }
+    .writing-card:hover {
+      border-color: rgba(108,60,224,0.25);
+      box-shadow: 0 4px 20px rgba(108,60,224,0.05);
+    }
+    .writing-badge {
+      display: inline-block;
+      font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #b45309; background: rgba(245,158,11,0.1);
+      padding: 0.15rem 0.5rem; border-radius: 4px;
+      margin-bottom: 0.875rem;
+    }
+    .writing-card h4 {
+      font-size: 0.95rem; font-weight: 700; letter-spacing: -0.01em;
+      margin-bottom: 0.4rem; color: var(--text); line-height: 1.35;
+    }
+    .writing-card p {
+      font-size: 0.82rem; color: var(--text-muted); line-height: 1.55;
+    }
+
+    /* ── ABOUT ── */
+    #about { background: var(--white); }
+    .about-grid {
+      display: grid; grid-template-columns: 220px 1fr; gap: 4.5rem;
+      align-items: start;
+    }
+    .about-photo-wrap { text-align: center; }
+    .about-avatar {
+      width: 160px; height: 160px; border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid var(--border);
+      margin: 0 auto 1.25rem;
+    }
+    .about-avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .about-name {
+      font-size: 0.9rem; font-weight: 700; color: var(--text); margin-bottom: 0.2rem;
+    }
+    .about-role { font-size: 0.78rem; color: var(--text-muted); }
+    .about-content { display: block; }
+    .about-content p {
+      font-size: 0.975rem; color: var(--text-secondary);
+      line-height: 1.8; margin-bottom: 1.1rem;
+    }
+    .about-content p:last-child { margin-bottom: 0; }
+    .about-location {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-size: 0.82rem; color: var(--text-muted);
+      margin-top: 1.25rem;
+    }
+    .about-location svg { color: var(--accent); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--text);
+      padding: 2.5rem 2rem;
+    }
+    .footer-inner {
+      max-width: var(--max-w); margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-copy {
+      font-size: 0.78rem; color: rgba(255,255,255,0.35);
+    }
+    .footer-links {
+      display: flex; gap: 1.5rem; list-style: none;
+    }
+    .footer-links a {
+      font-size: 0.78rem; font-weight: 500;
+      color: rgba(255,255,255,0.55); text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: rgba(255,255,255,0.9); }
+
+    /* ── ANIMATIONS ── */
+    .fade-up {
+      opacity: 0; transform: translateY(20px);
+      transition: opacity 0.55s cubic-bezier(0.16,1,0.3,1), transform 0.55s cubic-bezier(0.16,1,0.3,1);
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      .hero-stats { grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+      .hero-stat { border-right: none; padding: 0; }
+      .work-card-grid { grid-template-columns: 1fr; }
+      .work-right { border-top: 1px solid var(--border); background: var(--bg); }
+      .work-left { border-right: none; }
+      .scope-grid { grid-template-columns: 1fr; }
+      .philosophy-grid { grid-template-columns: 1fr 1fr; }
+      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .about-photo-wrap { text-align: left; display: flex; align-items: center; gap: 1.5rem; }
+      .about-avatar { margin: 0; }
+    }
+    @media (max-width: 640px) {
+      .nav-links {
+        display: none; position: absolute; top: 60px; left: 0; right: 0;
+        flex-direction: column; background: var(--white);
+        border-bottom: 1px solid var(--border);
+        padding: 1.25rem 2rem; gap: 1rem;
+        align-items: flex-start;
+      }
+      .nav-links.open { display: flex; }
+      .mobile-toggle { display: block; }
+      .hero h1 { font-size: 2.2rem; }
+      .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+      .philosophy-grid { grid-template-columns: 1fr; }
+      .writing-grid { grid-template-columns: 1fr; }
+      .work-left { padding: 1.75rem; }
+      .work-right { padding: 1.75rem; }
+      .footer-inner { flex-direction: column; gap: 0.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">Mumuksh Meghwal</a>
+    <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#scope">Scope</a></li>
+      <li><a href="#philosophy">Philosophy</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="mailto:mumukshmeghwal@gmail.com" class="nav-cta">Say Hello</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ══════════════════ 1. HERO ══════════════════ -->
+<section class="hero" id="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Product Leader &nbsp;·&nbsp; Systems Thinker &nbsp;·&nbsp; Bengaluru, India</div>
+    <h1>I turn operational complexity<br>into scalable infrastructure.</h1>
+    <p class="hero-sub">
+      From 0→1 launches to multi-country execution.<br>
+      ₹20Cr+ impact across retail, marketplace &amp; finance systems.
+    </p>
+    <div class="hero-stats">
+      <div class="hero-stat fade-up">
+        <div class="hero-stat-num">9+</div>
+        <div class="hero-stat-label">Years Building<br>Product Systems</div>
+      </div>
+      <div class="hero-stat fade-up">
+        <div class="hero-stat-num">₹20Cr+</div>
+        <div class="hero-stat-label">Revenue &amp; Cost<br>Impact Delivered</div>
+      </div>
+      <div class="hero-stat fade-up">
+        <div class="hero-stat-num">12+</div>
+        <div class="hero-stat-label">Countries<br>Scaled Across</div>
+      </div>
+      <div class="hero-stat fade-up">
+        <div class="hero-stat-num">20+</div>
+        <div class="hero-stat-label">Engineers &amp; PMs<br>Led</div>
+      </div>
+      <div class="hero-stat fade-up">
+        <div class="hero-stat-num">5+</div>
+        <div class="hero-stat-label">ERP &amp; Platform<br>Integrations</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ 3. SELECTED WORK ══════════════════ -->
+<section id="work">
+  <div class="section-inner">
+    <div class="section-label">Selected Work</div>
+    <h2 class="section-title">Systems I've Built</h2>
+    <p class="section-desc">Each project required understanding the whole system before touching a single screen. Architecture first. Data always.</p>
+
+    <div class="work-list">
+
+      <!-- CARD 1: Store-Tech Platform -->
+      <div class="work-card fade-up">
+        <div class="work-card-grid">
+          <div class="work-left">
+            <span class="work-tag">Retail Tech &nbsp;·&nbsp; 0→1</span>
+            <h3>Store-Tech Retail Platform</h3>
+            <p class="work-descriptor">End-to-end retail stack connecting physical stores to the digital supply chain — built from scratch.</p>
+
+            <div class="work-block">
+              <div class="work-block-label">Problem</div>
+              <p>Physical retail expansion was blocked by disconnected POS, CRM, and inventory systems. Manual duplication across 4+ tools made scale beyond 2 stores impossible.</p>
+            </div>
+
+            <div class="work-block">
+              <div class="work-block-label">Strategic Decision</div>
+              <p>The core call was to prioritise data unification before store expansion — build once, deploy to 50+. Architecture before GTM.</p>
+            </div>
+
+            <div class="work-block">
+              <div class="work-block-label">What I Built</div>
+              <ul>
+                <li>Unified inventory → CRM → Shopify → POS with backend supply chain sync</li>
+                <li>Plug-and-play onboarding architecture for rapid store rollout</li>
+                <li>Real-time stock visibility across offline and online channels</li>
+                <li>Customer data layer shared across in-store and digital touchpoints</li>
+              </ul>
+            </div>
+
+            <div class="work-impact">
+              <div class="impact-chip">
+                <span class="impact-num">₹1Cr+</span>
+                <span class="impact-desc">Revenue / store / month</span>
+              </div>
+              <div class="impact-chip">
+                <span class="impact-num">3 mo</span>
+                <span class="impact-desc">Time to first revenue</span>
+              </div>
+              <div class="impact-chip">
+                <span class="impact-num">50+</span>
+                <span class="impact-desc">Store scale target</span>
+              </div>
+            </div>
+          </div>
+          <div class="work-right">
+            <div class="meta-block">
+              <div class="meta-label">My Role</div>
+              <div class="meta-value">Sole PM — owned platform vision, architecture decisions &amp; GTM for first 2 stores</div>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-block">
+              <div class="meta-label">Team</div>
+              <div class="meta-value">Engineering + Retail Ops + Founders</div>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-block">
+              <div class="meta-label">Integrations</div>
+              <div class="meta-value">Shopify · POS · CRM · ERP · Supply Chain</div>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-block">
+              <div class="meta-label">Geography</div>
+              <div class="meta-value">India</div>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-block">
+              <div class="meta-label">Type</div>
+              <div class="meta-value">0→1 Platform Build</div>
+            </div>
+          </div>
+        </div>
+        <div class="work-card-footer">View Case Study &nbsp;→</div>
+      </div>
+
+      <!-- CARD 2: AI Invoice Intelligence -->
+      <div class="work-card fade-up">
+        <div class="work-card-grid">
+          <div class="work-left">
+            <span class="work-tag">Finance Automation &nbsp;·&nbsp; AI</span>
+            <h3>AI Invoice Intelligence &amp; Finance Ops</h3>
+            <p class="work-descriptor">Replaced a 5-step manual finance workflow with an AI-driven validation pipeline synced to ERP.</p>
+
+            <div class="work-block">
+              <div class="work-block-label">Problem</div>
+              <p>Thousands of invoices processed monthly with 5+ manual checkpoints each. Validation logic lived in people's heads — when key staff were absent, errors compounded. AR accuracy sat at 30%.</p>
+            </div>
+
+            <div class="work-block">
+              <div class="work-block-label">Strategic Decision</div>
+              <p>We chose system-driven validation checks over manual review gates — eliminating reconciliation debt at source so errors never compound into the month-end close.</p>
+            </div>
+
+            <div class="work-block">
+              <div class="work-block-label">What I Built</div>
+              <ul>
+                <li>LLM + rules-engine auto-validation against PO data — replacing 5 manual steps</li>
+                <li>ERP sync pipeline eliminating double-entry across finance &amp; ops teams</li>
+                <li>AR reconciliation engine raising accuracy from 30% → 75%, recovering excess GST credits</li>
+                <li>Vendor payout wallet automating settlement with 85% reduction in TAT</li>
+                <li>Audit-ready compliance workflows for IPO-readiness</li>
+              </ul>
+            </div>
+
+            <div class="work-impact">
+              <div class="impact-chip">
+                <span class="impact-num">80%</span>
+                <span class="impact-desc">Manual ops cut</span>
+              </div>
+              <div class="impact-chip">
+                <span class="impact-num">₹9Cr</span>
+                <span class="impact-desc">Annual manpower saved</span>
+              </div>
+              <div class="impact-chip">
+                <span class="impact-num">₹2Cr</span>
+                <span class="impact-desc">GST credits recovered</span>
+              </div>
+              <div class="impact-chip">
+                <span class="impact-num">85%</span>
+                <span class="impact-desc">Payout TAT reduction</span>
+              </div>
+            </div>
+          </div>
+          <div class="work-right">
+            <div class="meta-block">
+              <div class="meta-label">My Role</div>
+              <div class="meta-value">Owned full Finance Ops product charter — AR, AP, reconciliation &amp; compliance</div>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-block">
+              <div class="meta-label">Team</div>
+              <div class="meta-value">Finance + Engineering + Vendor Ops</div>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-block">
+              <div class="meta-label">Integrations</div>
+              <div class="meta-value">MS D365 ERP · LLM Validation · Payout APIs</div>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-block">
+              <div class="meta-label">Geography</div>
+              <div class="meta-value">India · SEA · Middle East</div>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-block">
+              <div class="meta-label">Domain</div>
+              <div class="meta-value">Finance Automation · AI · Compliance</div>
+            </div>
+          </div>
+        </div>
+        <div class="work-card-footer">View Case Study &nbsp;→</div>
+      </div>
+
+      <!-- CARD 3: Digital Proof of Delivery -->
+      <div class="work-card fade-up">
+        <div class="work-card-grid">
+          <div class="work-left">
+            <span class="work-tag">Supply Chain &nbsp;·&nbsp; Fulfillment</span>
+            <h3>Digital Proof of Delivery</h3>
+            <p class="work-descriptor">Eliminated delivery leakage through real-time digital verification across 3 geographies and 6K+ vendors.</p>
+
+            <div class="work-block">
+              <div class="work-block-label">Problem</div>
+              <p>Delivery verification was entirely manual across 3 geographies. Wrong supplies went undetected for weeks — no audit trail meant disputes resolved retroactively, leaking ₹2.6Cr/year.</p>
+            </div>
+
+            <div class="work-block">
+              <div class="work-block-label">Strategic Decision</div>
+              <p>Verification had to happen at the moment of delivery — not after. We shifted the control point from finance reconciliation to physical handoff, closing the loop before errors entered the system.</p>
+            </div>
+
+            <div class="work-block">
+              <div class="work-block-label">What I Built</div>
+              <ul>
+                <li>Real-time photo verification and signature capture at point of delivery</li>
+                <li>Automated mismatch detection with vendor reconciliation triggers</li>
+                <li>Integration with order management and vendor tracking systems</li>
+                <li>Escalation workflows replacing retroactive dispute resolution</li>
+              </ul>
+            </div>
+
+            <div class="work-impact">
+              <div class="impact-chip">
+                <span class="impact-num">80%</span>
+                <span class="impact-desc">Delivery errors reduced</span>
+              </div>
+              <div class="impact-chip">
+                <span class="impact-num">₹2.6Cr</span>
+                <span class="impact-desc">Annual savings</span>
+              </div>
+              <div class="impact-chip">
+                <span class="impact-num">30%</span>
+                <span class="impact-desc">Fewer escalations</span>
+              </div>
+            </div>
+          </div>
+          <div class="work-right">
+            <div class="meta-block">
+              <div class="meta-label">My Role</div>
+              <div class="meta-value">Owned fulfillment product end-to-end — designed, coordinated, and shipped</div>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-block">
+              <div class="meta-label">Team</div>
+              <div class="meta-value">Ops + CX + Vendor Management + Engineering</div>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-block">
+              <div class="meta-label">Vendor Ecosystem</div>
+              <div class="meta-value">6,000+ vendors across 3 regions</div>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-block">
+              <div class="meta-label">Geography</div>
+              <div class="meta-value">India · Southeast Asia · Middle East</div>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-block">
+              <div class="meta-label">Domain</div>
+              <div class="meta-value">Supply Chain · Fulfillment · Vendor Ops</div>
+            </div>
+          </div>
+        </div>
+        <div class="work-card-footer">View Case Study &nbsp;→</div>
+      </div>
+
+      <!-- CARD 4: GPS Field Governance -->
+      <div class="work-card fade-up">
+        <div class="work-card-grid">
+          <div class="work-left">
+            <span class="work-tag">Ops Automation &nbsp;·&nbsp; Fraud Prevention</span>
+            <h3>GPS Field Governance System</h3>
+            <p class="work-descriptor">Deployed geofence-based site visit detection to eliminate travel fraud and close a ₹10Cr/year control gap.</p>
+
+            <div class="work-block">
+              <div class="work-block-label">Problem</div>
+              <p>₹10Cr/year in field reimbursements had zero system-level verification. Fraudulent and legitimate claims were indistinguishable. Customer updates were logged manually, hours after visits.</p>
+            </div>
+
+            <div class="work-block">
+              <div class="work-block-label">Strategic Decision</div>
+              <p>Tying reimbursement eligibility directly to GPS-verified presence meant the system enforced policy automatically — no approvals, no manual audits, no exceptions.</p>
+            </div>
+
+            <div class="work-block">
+              <div class="work-block-label">What I Built</div>
+              <ul>
+                <li>GPS/geofence logic to auto-verify field agent presence at customer sites</li>
+                <li>Reimbursement eligibility tied to verified check-in — eliminating fraudulent claims</li>
+                <li>Real-time customer update triggers on verified site arrival</li>
+                <li>Governance dashboard for ops managers to audit field activity</li>
+              </ul>
+            </div>
+
+            <div class="work-impact">
+              <div class="impact-chip">
+                <span class="impact-num">₹10Cr</span>
+                <span class="impact-desc">Fraud prevented / year</span>
+              </div>
+              <div class="impact-chip">
+                <span class="impact-num">Real-time</span>
+                <span class="impact-desc">Customer updates</span>
+              </div>
+              <div class="impact-chip">
+                <span class="impact-num">100%</span>
+                <span class="impact-desc">Claim verification</span>
+              </div>
+            </div>
+          </div>
+          <div class="work-right">
+            <div class="meta-block">
+              <div class="meta-label">My Role</div>
+              <div class="meta-value">Conceived and shipped as part of the Field &amp; Ops product charter</div>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-block">
+              <div class="meta-label">Team</div>
+              <div class="meta-value">Ops + Finance + Engineering + CX</div>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-block">
+              <div class="meta-label">Integrations</div>
+              <div class="meta-value">GPS/Location APIs · Reimbursement System · CRM</div>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-block">
+              <div class="meta-label">Geography</div>
+              <div class="meta-value">Pan-India Operations</div>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-block">
+              <div class="meta-label">Domain</div>
+              <div class="meta-value">Field Ops · Compliance · Fraud Prevention</div>
+            </div>
+          </div>
+        </div>
+        <div class="work-card-footer">View Case Study &nbsp;→</div>
+      </div>
+
+      <!-- CARD 5: QueryGPT -->
+      <div class="work-card fade-up">
+        <div class="work-card-grid">
+          <div class="work-left">
+            <span class="work-tag">AI &nbsp;·&nbsp; Self-Serve Analytics</span>
+            <h3>QueryGPT — Natural Language to SQL</h3>
+            <p class="work-descriptor">Turned a 2-day BI turnaround into instant self-serve analytics for non-technical teams.</p>
+
+            <div class="work-block">
+              <div class="work-block-label">Problem</div>
+              <p>Every data question required a BI ticket — a 2-day wait for a 2-minute answer. The bottleneck wasn't speed; the data team were the only ones who could query data at all.</p>
+            </div>
+
+            <div class="work-block">
+              <div class="work-block-label">Strategic Decision</div>
+              <p>Instead of scaling the BI team, we eliminated the dependency entirely — translating intent into validated SQL so non-technical teams could self-serve without training or ticket queues.</p>
+            </div>
+
+            <div class="work-block">
+              <div class="work-block-label">What I Built</div>
+              <ul>
+                <li>NL→SQL engine translating plain English into validated warehouse queries</li>
+                <li>Schema mapping layer abstracting technical complexity from business users</li>
+                <li>Query safety guardrails preventing destructive or inaccurate results</li>
+                <li>Adoption layer — deployed to Ops, CX, and Product without training</li>
+              </ul>
+            </div>
+
+            <div class="work-impact">
+              <div class="impact-chip">
+                <span class="impact-num">60%</span>
+                <span class="impact-desc">BI backlog reduced</span>
+              </div>
+              <div class="impact-chip">
+                <span class="impact-num">2d → 2m</span>
+                <span class="impact-desc">Insight speed</span>
+              </div>
+              <div class="impact-chip">
+                <span class="impact-num">Self-serve</span>
+                <span class="impact-desc">For all teams</span>
+              </div>
+            </div>
+          </div>
+          <div class="work-right">
+            <div class="meta-block">
+              <div class="meta-label">My Role</div>
+              <div class="meta-value">Conceived, scoped, and drove adoption — from POC to production workflow tool</div>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-block">
+              <div class="meta-label">Team</div>
+              <div class="meta-value">Data Engineering + Analytics + Ops + CX</div>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-block">
+              <div class="meta-label">Integrations</div>
+              <div class="meta-value">LLM APIs · Data Warehouse · BI Layer</div>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-block">
+              <div class="meta-label">Users</div>
+              <div class="meta-value">Non-technical: PMs, Ops, CX, Finance leads</div>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-block">
+              <div class="meta-label">Domain</div>
+              <div class="meta-value">AI · Data Products · Analytics Automation</div>
+            </div>
+          </div>
+        </div>
+        <div class="work-card-footer">View Case Study &nbsp;→</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ 4. SCOPE & SCALE ══════════════════ -->
+<section id="scope">
+  <div class="section-inner">
+    <div class="section-label">Scope &amp; Ownership</div>
+    <h2 class="section-title">Not a Feature PM.</h2>
+    <p class="section-desc">I operate at the system and org level — across product, engineering, finance, and operations simultaneously.</p>
+
+    <div class="scope-grid fade-up">
+      <div class="scope-col">
+        <h3>Product Scope</h3>
+        <div class="scope-item">
+          <div class="scope-dot"></div>
+          <div class="scope-item-text">
+            <div class="scope-item-title">Commerce Stack</div>
+            <div class="scope-item-sub">Shopify, POS, catalog, cart &amp; checkout — multi-country, multi-device</div>
+          </div>
+        </div>
+        <div class="scope-item">
+          <div class="scope-dot"></div>
+          <div class="scope-item-text">
+            <div class="scope-item-title">Inventory &amp; Fulfillment Systems</div>
+            <div class="scope-item-sub">End-to-end: vendor shipments, PoD, delivery tracking, warehouse sync</div>
+          </div>
+        </div>
+        <div class="scope-item">
+          <div class="scope-dot"></div>
+          <div class="scope-item-text">
+            <div class="scope-item-title">Vendor Ecosystem</div>
+            <div class="scope-item-sub">Onboarding, trust scoring, direct-ship routing, governance across 6K+ vendors</div>
+          </div>
+        </div>
+        <div class="scope-item">
+          <div class="scope-dot"></div>
+          <div class="scope-item-text">
+            <div class="scope-item-title">Finance Automation</div>
+            <div class="scope-item-sub">Invoice validation, AR reconciliation, payout platform, compliance workflows</div>
+          </div>
+        </div>
+        <div class="scope-item">
+          <div class="scope-dot"></div>
+          <div class="scope-item-text">
+            <div class="scope-item-title">ERP &amp; Platform Integrations</div>
+            <div class="scope-item-sub">MS D365 sync, multi-system data flows, event-driven architecture</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scope-col">
+        <h3>Org Scope</h3>
+        <div class="scope-item">
+          <div class="scope-dot"></div>
+          <div class="scope-item-text">
+            <div class="scope-item-title">Cross-functional Pod with Full Charter Ownership</div>
+            <div class="scope-item-sub">Built and led a pod of PMs, designers &amp; engineers operating across 3 regions end-to-end — no handoffs, no shared ownership</div>
+          </div>
+        </div>
+        <div class="scope-item">
+          <div class="scope-dot"></div>
+          <div class="scope-item-text">
+            <div class="scope-item-title">Org-Wide Stakeholder Surface</div>
+            <div class="scope-item-sub">Aligned CX, Finance, Legal, Ops, Procurement, and Founders — often simultaneously on the same platform decision</div>
+          </div>
+        </div>
+        <div class="scope-item">
+          <div class="scope-dot"></div>
+          <div class="scope-item-text">
+            <div class="scope-item-title">P&amp;L Exposure on Field Ops Spend</div>
+            <div class="scope-item-sub">Owned system controls over ₹10Cr+/year reimbursement budget — product decisions directly impacted the cost line</div>
+          </div>
+        </div>
+        <div class="scope-item">
+          <div class="scope-dot"></div>
+          <div class="scope-item-text">
+            <div class="scope-item-title">Compliance Architecture for IPO-Readiness</div>
+            <div class="scope-item-sub">Designed audit-ready finance &amp; ops workflows — not just product compliance, but regulatory alignment across systems</div>
+          </div>
+        </div>
+        <div class="scope-item">
+          <div class="scope-dot"></div>
+          <div class="scope-item-text">
+            <div class="scope-item-title">500+ Internal Users Across 4 Functions</div>
+            <div class="scope-item-sub">Platform adopted by Ops, Finance, CX, and Vendor Management — built for non-technical users at operational scale</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ 5. OPERATING PHILOSOPHY ══════════════════ -->
+<section id="philosophy">
+  <div class="section-inner">
+    <div class="section-label">Operating Philosophy</div>
+    <h2 class="section-title">How I Build</h2>
+    <p class="section-desc">Three principles that show up in every product decision I make.</p>
+
+    <div class="philosophy-grid">
+      <div class="philosophy-card fade-up">
+        <div class="philosophy-num">01</div>
+        <h4>Systems Over Features</h4>
+        <p>I design architecture that reduces downstream complexity. Before writing a spec, I map how the whole system behaves — data flows, failure modes, integration surfaces. Every feature ships as part of a coherent architecture, not a standalone addition.</p>
+      </div>
+      <div class="philosophy-card fade-up">
+        <div class="philosophy-num">02</div>
+        <h4>Business Model First</h4>
+        <p>Revenue, cost structure, and margin implications drive prioritization — not user story velocity. Before touching UI, I understand the unit economics and operational constraints. Product decisions follow business logic, not the reverse.</p>
+      </div>
+      <div class="philosophy-card fade-up">
+        <div class="philosophy-num">03</div>
+        <h4>Integration Is Strategy</h4>
+        <p>Platform decisions compound over time. Every API contract, every ERP sync, every vendor data model is a long-term bet. I treat integration architecture as a strategic decision — not a technical detail left to engineers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ 6. WRITING ══════════════════ -->
+<section id="writing" style="display:none">
+  <div class="section-inner">
+    <div class="section-label">Writing &amp; Thinking</div>
+    <h2 class="section-title">Essays</h2>
+    <p class="section-desc">Thinking about systems, product, and operations — written from the trenches.</p>
+
+    <div class="writing-grid">
+      <div class="writing-card fade-up">
+        <span class="writing-badge">Coming Soon</span>
+        <h4>Designing Global Vendor Systems at Scale</h4>
+        <p>What it takes to build trust, tracking, and governance across 6,000+ vendors in 3 geographies — and why it's a product problem, not a vendor management one.</p>
+      </div>
+      <div class="writing-card fade-up">
+        <span class="writing-badge">Coming Soon</span>
+        <h4>Commerce Stack Tradeoffs: Shopify vs Custom</h4>
+        <p>Lessons from building a retail-tech platform integrating Shopify, POS, CRM, and supply chain — and where off-the-shelf solutions quietly break down.</p>
+      </div>
+      <div class="writing-card fade-up">
+        <span class="writing-badge">Coming Soon</span>
+        <h4>Scaling 0→1 Platforms in High Ambiguity</h4>
+        <p>From no tech stack to 50-store architecture in months. How to make good architectural bets when requirements are still forming.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ 7. ABOUT ══════════════════ -->
+<section id="about">
+  <div class="section-inner">
+    <div class="section-label">About</div>
+    <div class="about-grid fade-up">
+      <div class="about-photo-wrap">
+        <div class="about-avatar">
+          <img src="image.png" alt="Mumuksh Meghwal">
+        </div>
+        <div>
+          <div class="about-name">Mumuksh Meghwal</div>
+          <div class="about-role">Senior Product Manager · Livspace</div>
+        </div>
+      </div>
+      <div class="about-content">
+        <p>
+          I started as a software engineer — building checkout systems across 12+ countries at Deutsche Telekom and high-traffic hospitality UIs at Sapient for Marriott. That engineering foundation shapes how I approach product: I think in systems, care about architecture, and treat integration as a first-class concern.
+        </p>
+        <p>
+          Over the past 9+ years, I've consistently taken on the kinds of problems most PMs avoid — complex, multi-stakeholder, operationally messy domains like supply chain, marketplace, and finance. The pattern has been consistent: understand the system deeply, find the leverage point, ship fast, and let data drive iteration.
+        </p>
+        <p>
+          At Livspace, this approach has delivered across India, Southeast Asia, and the Middle East — building platforms that handle vendor ecosystems, financial reconciliation, field governance, and retail tech from scratch. I hold a Product Management certificate from ISB (2024–2025) and a B.Tech in Computer Science from NIT Hamirpur.
+        </p>
+        <div class="about-location">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Currently based in Bengaluru. Open to global roles.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ FOOTER ══════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <span class="footer-copy">&copy; 2026 Mumuksh Meghwal</span>
+    <ul class="footer-links">
+      <li><a href="https://linkedin.com/in/mumukshmeghwal" target="_blank">LinkedIn</a></li>
+      <li><a href="mailto:mumukshmeghwal@gmail.com">Email</a></li>
+      <li><a href="Mumuksh (1).pdf" download>Resume</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+  // Navbar scroll
+  const nav = document.getElementById('navbar');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
+
+  // Mobile menu close on link click
+  document.querySelectorAll('.nav-links a').forEach(a =>
+    a.addEventListener('click', () => document.querySelector('.nav-links').classList.remove('open'))
+  );
+
+  // Scroll-in animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.06, rootMargin: '0px 0px -20px 0px' });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Active nav highlight
+  const sections = document.querySelectorAll('section[id]');
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY + 80;
+    sections.forEach(s => {
+      const link = document.querySelector(`.nav-links a[href="#${s.id}"]`);
+      if (link && !link.classList.contains('nav-cta'))
+        link.style.color = (y >= s.offsetTop && y < s.offsetTop + s.offsetHeight) ? 'var(--text)' : '';
+    });
+  });
+</script>
+
+</body>
+</html>
